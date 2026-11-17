@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Login page for METRO LOAN.">
+
+    <title>Login | METRO LOAN</title>
+
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/site-footer.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/site-chrome.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="nav-container">
+
+            <a href="index.html" class="brand" aria-label="METRO LOAN Home">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="main-nav">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+            <nav class="main-nav" id="main-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="loans.html">Loans</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="calculator.html">Calculator</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="login.html" class="login-link">Login</a>
+                <a href="register.html" class="nav-button">Get Started</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- LOGIN SECTION -->
+    <main class="auth-area">
+
+        <div class="auth-card">
+
+            <a href="index.html" class="auth-brand">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+
+            <span class="section-label">WELCOME BACK</span>
+
+            <h1>Login to your account</h1>
+
+            <p class="auth-description">
+                Enter your details to continue.
+            </p>
+
+
+            <!-- LOGIN FORM -->
+            <form>
+
+                <label for="login-email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="login-email"
+                    placeholder="Enter your email address"
+                    required
+                >
+
+
+                <label for="login-password">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="login-password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <div class="form-options">
+
+                    <label class="remember">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+
+                    <a href="forgot-password.html">Forgot password?</a>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="primary-button"
+                    >
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <p class="auth-switch">
+                Don't have an account?
+                <a href="register.html">Create an account</a>
+            </p>
+
+
+            <p class="auth-note">
+                This is a frontend demonstration.
+                Account login is not connected yet.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="auth-footer">
+
+        <p>
+            © <span id="current-year">2026</span> METRO LOAN.
+            All rights reserved.
+        </p>
+
+        <a href="index.html">Back to Home</a>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+/* Shared navigation styling — kept in sync with how-it-works.css */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 94px;
+    background: var(--white);
+    border-bottom: 1px solid #f0f2f1;
+}
+
+.nav-container {
+    width: min(1180px, calc(100% - 64px));
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand,
+.auth-brand,
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 47px;
+    height: 47px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 5px 17px 5px 17px;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.brand-name {
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: normal;
+    white-space: nowrap;
+}
+
+.main-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    color: inherit;
+    font-size: 17px;
+    font-weight: 400;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--green-dark);
+}
+
+.main-nav a.active {
+    font-weight: 700;
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 13px;
+    height: 3px;
+    background: var(--green);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+    white-space: nowrap;
+}
+
+.login-link {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.login-link.active {
+    color: var(--green-dark);
+}
+
+.nav-button {
+    min-height: 0;
+    padding: 11px 20px;
+    color: var(--white);
+    background: var(--green);
+    border: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: var(--green-dark);
+}
+
+.nav-button.active {
+    background: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(25, 201, 155, 0.2);
+}
+
+.secondary-button {
+    color: var(--green-dark);
+    border-color: var(--green);
+}
+
+.menu-toggle {
+    display: none;
+    width: 43px;
+    height: 42px;
+    padding: 8px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--navy);
+    border-radius: 5px;
+}
+
+@media (max-width: 1050px) {
+    .nav-container {
+        width: calc(100% - 40px);
+        gap: 15px;
+    }
+
+    .main-nav {
+        gap: 17px;
+    }
+
+    .main-nav a {
+        font-size: 15px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .nav-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        height: 76px;
+    }
+
+    .nav-container {
+        width: calc(100% - 36px);
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+        width: 43px;
+        height: 42px;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        height: auto;
+        padding: 12px 23px 20px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: 0 12px 20px rgba(16, 42, 67, 0.08);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        min-height: 44px;
+        height: auto;
+        font-size: 17px;
+    }
+
+    .main-nav a.active::after {
+        left: 0;
+        right: auto;
+        bottom: 0;
+        width: 35px;
+        height: 2px;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+}

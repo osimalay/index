@@ -1,0 +1,632 @@
+/* ==============================
+   ROOT VARIABLES
+============================== */
+
+:root {
+    --navy: #102a43;
+    --green: #19c99b;
+    --green-dark: #0eae83;
+    --mint: #eafaf5;
+    --deep-mint: #d8f6ec;
+    --white: #ffffff;
+    --text: #111111;
+    --muted: #626b68;
+    --border: #e5eeea;
+    --soft: #f7fbf9;
+
+    --shadow: 0 12px 35px rgba(16, 42, 67, 0.08);
+}
+
+
+/* ==============================
+   GENERAL STYLES
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 94px;
+    background: var(--white);
+    border-bottom: 1px solid #f0f2f1;
+}
+
+.nav-container {
+    width: min(1180px, calc(100% - 64px));
+    height: 100%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand,
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 47px;
+    height: 47px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    background: var(--green);
+
+    border-radius: 5px 17px 5px 17px;
+
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.brand-name {
+    color: var(--navy);
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    position: relative;
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--green-dark);
+}
+
+.main-nav a.active {
+    font-weight: 700;
+}
+
+.main-nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+
+    width: 100%;
+    height: 2px;
+
+    background: var(--green);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    flex-shrink: 0;
+}
+
+.login-link {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav-button {
+    min-height: 47px;
+    padding: 0 22px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    background: var(--green);
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: background 0.2s ease;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: var(--green-dark);
+}
+
+.menu-toggle {
+    display: none;
+    width: 43px;
+    height: 43px;
+
+    border: 1px solid var(--border);
+    border-radius: 6px;
+
+    background: var(--white);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 21px;
+    height: 2px;
+    margin: 5px auto;
+
+    background: var(--navy);
+}
+
+
+/* ==============================
+   PAGE CONTAINER
+============================== */
+
+.page-container {
+    width: min(1180px, calc(100% - 64px));
+    margin: auto;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 14px;
+
+    color: var(--green-dark);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* ==============================
+   PAGE HERO
+============================== */
+
+.page-hero {
+    padding: 75px 0;
+    background: var(--mint);
+}
+
+.page-hero h1 {
+    max-width: 700px;
+    margin-bottom: 15px;
+
+    color: var(--navy);
+
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.15;
+}
+
+.page-hero p {
+    max-width: 650px;
+    color: var(--muted);
+}
+
+
+/* ==============================
+   FAQ SECTION
+============================== */
+
+.faq-area {
+    padding: 85px 0;
+}
+
+.faq-container {
+    max-width: 900px;
+}
+
+.faq-heading {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.faq-heading h2 {
+    color: var(--navy);
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.2;
+}
+
+.faq-heading p {
+    margin-top: 12px;
+    color: var(--muted);
+}
+
+
+/* ==============================
+   FAQ QUESTIONS
+============================== */
+
+.faq-list details {
+    margin-bottom: 13px;
+    padding: 21px 24px;
+
+    background: var(--soft);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+}
+
+.faq-list summary {
+    position: relative;
+    padding-right: 25px;
+
+    color: var(--navy);
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-list summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-list summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: -4px;
+
+    color: var(--green-dark);
+
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+}
+
+.faq-list details[open] summary::after {
+    content: "−";
+}
+
+.faq-list details p {
+    margin-top: 13px;
+
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* ==============================
+   FAQ CONTACT CTA
+============================== */
+
+.faq-cta {
+    padding: 65px 0;
+    background: var(--mint);
+    text-align: center;
+}
+
+.faq-cta h2 {
+    color: var(--navy);
+    font-size: 36px;
+}
+
+.faq-cta p {
+    margin: 8px 0 20px;
+    color: var(--muted);
+}
+
+.primary-button {
+    min-height: 49px;
+    padding: 0 24px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+    background: var(--green);
+
+    border-radius: 5px;
+
+    font-weight: 700;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+}
+
+.footer-main {
+    width: min(1180px, calc(100% - 64px));
+    margin: auto;
+    padding: 65px 0 45px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 0.8fr 1fr;
+    gap: 40px;
+}
+
+.footer-brand .brand-name {
+    color: var(--white);
+}
+
+.footer-about > p,
+.footer-column > p {
+    max-width: 290px;
+    margin-top: 15px;
+
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-about .footer-tagline {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.footer-column h3 {
+    margin-bottom: 7px;
+    font-size: 17px;
+}
+
+.footer-column > a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+}
+
+.footer-column > a:hover,
+.footer-column .footer-contact-link {
+    color: var(--green);
+}
+
+.footer-column .footer-contact-link {
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.footer-bottom {
+    width: min(1180px, calc(100% - 64px));
+    min-height: 70px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 1100px) {
+
+    .nav-container {
+        width: calc(100% - 40px);
+        gap: 15px;
+    }
+
+    .main-nav {
+        gap: 17px;
+    }
+
+    .main-nav a {
+        font-size: 15px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .nav-actions {
+        gap: 12px;
+    }
+
+    .nav-button {
+        padding: 0 14px;
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 760px) {
+
+    .site-header {
+        height: 76px;
+    }
+
+    .nav-container,
+    .page-container,
+    .footer-main,
+    .footer-bottom {
+        width: calc(100% - 36px);
+    }
+
+    .brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+
+    .brand-name {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+
+        display: none;
+        padding: 12px 23px 20px;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        background: var(--white);
+        border-top: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        min-height: 44px;
+
+        display: flex;
+        align-items: center;
+
+        font-size: 16px;
+    }
+
+    .main-nav a.active::after {
+        bottom: 0;
+        width: 35px;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL PHONE RESPONSIVENESS
+============================== */
+
+@media (max-width: 480px) {
+
+    .page-container,
+    .footer-main,
+    .footer-bottom {
+        width: calc(100% - 32px);
+    }
+
+    .page-hero {
+        padding: 55px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 36px;
+    }
+
+    .faq-area {
+        padding: 60px 0;
+    }
+
+    .faq-list details {
+        padding: 18px;
+    }
+
+    .faq-list summary {
+        font-size: 15px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        padding: 50px 0 35px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+}
