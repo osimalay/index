@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply for a METRO LOAN personal loan.">
+    <title>Apply for a Loan | METRO LOAN</title>
+
+    <link rel="stylesheet" href="/css/apply-for-loan.css">
+    <script src="../js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="overview.html" class="sidebar-brand">
+            <span class="brand-mark">M</span>
+            <span class="brand-name">METRO LOAN</span>
+        </a>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+            <a href="overview.html" class="sidebar-link">
+                <span class="nav-icon">⌂</span>
+                <span>Overview</span>
+            </a>
+
+            <a href="apply-for-loan.html" class="sidebar-link active" aria-current="page">
+                <span class="nav-icon">＋</span>
+                <span>Apply for a Loan</span>
+            </a>
+
+            <a href="my-loans.html" class="sidebar-link">
+                <span class="nav-icon">▤</span>
+                <span>My Loans</span>
+            </a>
+
+            <a href="repayment-schedule.html" class="sidebar-link">
+                <span class="nav-icon">▦</span>
+                <span>Repayment Schedule</span>
+            </a>
+
+            <a href="transaction-history.html" class="sidebar-link">
+                <span class="nav-icon">↔</span>
+                <span>Transaction History</span>
+            </a>
+
+            <div class="sidebar-label account-label">ACCOUNT</div>
+
+            <a href="my-profile.html" class="sidebar-link">
+                <span class="nav-icon">♙</span>
+                <span>My Profile</span>
+            </a>
+
+            <a href="notifications.html" class="sidebar-link">
+                <span class="nav-icon">♧</span>
+                <span>Notifications</span>
+                <span class="notification-count">2</span>
+            </a>
+
+            <a href="help-support.html" class="sidebar-link">
+                <span class="nav-icon">?</span>
+                <span>Help &amp; Support</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+                <div class="help-icon">?</div>
+                <div>
+                    <strong>Need assistance?</strong>
+                    <p>We're here to help.</p>
+                    <a href="help-support.html">Get support →</a>
+                </div>
+            </div>
+
+            <a href="../login.html" class="logout-link">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="sidebar-toggle" id="sidebarToggle"
+                        type="button" aria-label="Open navigation"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div>
+                    <p class="header-greeting">USER ACCOUNT</p>
+                    <h1>Apply for a Loan</h1>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <a href="notifications.html" class="header-notification"
+                   aria-label="Notifications">
+                    <span>♧</span>
+                    <i></i>
+                </a>
+
+                <div class="header-divider"></div>
+
+                <a href="my-profile.html" class="profile-summary">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-details">
+                        <strong>My Account</strong>
+                        <span>Personal dashboard</span>
+                    </div>
+                    <span class="profile-arrow">⌄</span>
+                </a>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <div class="dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="page-intro">
+                <div>
+                    <p class="page-eyebrow">LOAN APPLICATION</p>
+                    <h2>Let's get you started.</h2>
+                    <p>
+                        Complete the information below to begin your loan
+                        application. Please provide accurate details.
+                    </p>
+                </div>
+
+                <div class="application-status">
+                    <span class="status-dot"></span>
+                    New application
+                </div>
+            </section>
+
+            <!-- APPLICATION NOTICE -->
+            <section class="application-notice">
+                <div class="notice-icon">i</div>
+                <div>
+                    <strong>Before you apply</strong>
+                    <p>
+                        Review your details carefully before submitting.
+                        Submitting an application does not guarantee loan
+                        approval or disbursement.
+                    </p>
+                </div>
+            </section>
+
+            <!-- FORM LAYOUT -->
+            <div class="application-layout">
+
+                <form class="application-form" id="loanApplicationForm">
+
+                    <!-- LOAN DETAILS -->
+                    <section class="form-section">
+
+                        <div class="form-section-heading">
+                            <div class="section-number">01</div>
+                            <div>
+                                <h3>Loan Details</h3>
+                                <p>Tell us about the loan you are requesting.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="loanAmount">Loan Amount (₦) <span>*</span></label>
+                                <input
+                                    type="number"
+                                    id="loanAmount"
+                                    name="loanAmount"
+                                    placeholder="e.g. 100000"
+                                    min="1"
+                                    step="1000"
+                                    required
+                                >
+                                <small>Enter the amount you would like to request.</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loanPurpose">Purpose of Loan <span>*</span></label>
+                                <select id="loanPurpose" name="loanPurpose" required>
+                                    <option value="">Select loan purpose</option>
+                                    <option value="Personal expenses">Personal expenses</option>
+                                    <option value="Business">Business</option>
+                                    <option value="Education">Education</option>
+                                    <option value="Medical expenses">Medical expenses</option>
+                                    <option value="Emergency">Emergency</option>
+                                    <option value="Home improvement">Home improvement</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="repaymentPeriod">Repayment Period <span>*</span></label>
+                                <select id="repaymentPeriod" name="repaymentPeriod" required>
+                                    <option value="">Select repayment period</option>
+                                    <option value="1 month">1 month</option>
+                                    <option value="3 months">3 months</option>
+                                    <option value="6 months">6 months</option>
+                                    <option value="9 months">9 months</option>
+                                    <option value="12 months">12 months</option>
+                                    <option value="18 months">18 months</option>
+                                    <option value="24 months">24 months</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="monthlyIncome">Monthly Income (₦) <span>*</span></label>
+                                <input
+                                    type="number"
+                                    id="monthlyIncome"
+                                    name="monthlyIncome"
+                                    placeholder="e.g. 150000"
+                                    min="0"
+                                    step="1000"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- PERSONAL INFORMATION -->
+                    <section class="form-section">
+
+                        <div class="form-section-heading">
+                            <div class="section-number">02</div>
+                            <div>
+                                <h3>Personal Information</h3>
+                                <p>Provide your basic personal details.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span>*</span></label>
+                                <input
+                                    type="text"
+                                    id="fullName"
+                                    name="fullName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span>*</span></label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span>*</span></label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="e.g. 08012345678"
+                                    autocomplete="tel"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateOfBirth">Date of Birth <span>*</span></label>
+                                <input
+                                    type="date"
+                                    id="dateOfBirth"
+                                    name="dateOfBirth"
+                                    autocomplete="bday"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="residentialAddress">Residential Address <span>*</span></label>
+                                <input
+                                    type="text"
+                                    id="residentialAddress"
+                                    name="residentialAddress"
+                                    placeholder="Enter your current residential address"
+                                    autocomplete="street-address"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- EMPLOYMENT INFORMATION -->
+                    <section class="form-section">
+
+                        <div class="form-section-heading">
+                            <div class="section-number">03</div>
+                            <div>
+                                <h3>Employment Information</h3>
+                                <p>Tell us about your current source of income.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="employmentStatus">Employment Status <span>*</span></label>
+                                <select id="employmentStatus" name="employmentStatus" required>
+                                    <option value="">Select employment status</option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Self-employed">Self-employed</option>
+                                    <option value="Business owner">Business owner</option>
+                                    <option value="Student">Student</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occupation">Occupation <span>*</span></label>
+                                <input
+                                    type="text"
+                                    id="occupation"
+                                    name="occupation"
+                                    placeholder="Enter your occupation"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="employer">Employer or Business Name</label>
+                                <input
+                                    type="text"
+                                    id="employer"
+                                    name="employer"
+                                    placeholder="Enter employer or business name"
+                                >
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <!-- ADDITIONAL INFORMATION -->
+                    <section class="form-section">
+
+                        <div class="form-section-heading">
+                            <div class="section-number">04</div>
+                            <div>
+                                <h3>Additional Information</h3>
+                                <p>Provide any extra details about your request.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="additionalInfo">Additional Comments</label>
+                            <textarea
+                                id="additionalInfo"
+                                name="additionalInfo"
+                                rows="5"
+                                placeholder="Tell us anything else you would like us to know about your application..."
+                            ></textarea>
+                        </div>
+
+                    </section>
+
+                    <!-- DECLARATION -->
+                    <section class="declaration-section">
+
+                        <label class="declaration-check">
+                            <input type="checkbox" id="confirmInformation" required>
+                            <span>
+                                I confirm that the information I have provided
+                                is accurate and complete to the best of my
+                                knowledge.
+                            </span>
+                        </label>
+
+                        <label class="declaration-check">
+                            <input type="checkbox" id="agreeTerms" required>
+                            <span>
+                                I acknowledge that my application is subject
+                                to review and that submission does not guarantee
+                                approval.
+                            </span>
+                        </label>
+
+                    </section>
+
+                    <!-- FORM ACTIONS -->
+                    <div class="form-actions">
+
+                        <button type="reset" class="reset-button">
+                            Clear Form
+                        </button>
+
+                        <button type="submit" class="submit-button">
+                            Submit Application <span>→</span>
+                        </button>
+
+                    </div>
+
+                    <p class="form-disclaimer">
+                    
+                    </p>
+
+                </form>
+
+                <!-- RIGHT SIDE INFORMATION -->
+                <aside class="application-sidebar">
+
+                    <div class="side-card application-steps">
+                        <h3>Application Process</h3>
+                        <p class="side-card-intro">
+                            Here's what to expect when applying.
+                        </p>
+
+                        <div class="step-item">
+                            <div class="step-marker">1</div>
+                            <div>
+                                <strong>Complete your details</strong>
+                                <p>Fill in your personal and loan information.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-marker">2</div>
+                            <div>
+                                <strong>Application review</strong>
+                                <p>Your submitted information can be reviewed.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-marker">3</div>
+                            <div>
+                                <strong>Application decision</strong>
+                                <p>A decision can be communicated through your account.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-marker">4</div>
+                            <div>
+                                <strong>Loan agreement</strong>
+                                <p>Review the terms before accepting any offer.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="side-card information-card">
+                        <div class="information-icon">i</div>
+                        <h3>Important Information</h3>
+                        <p>
+                            Only request an amount you can reasonably afford
+                            to repay. Review all applicable fees, interest
+                            rates and repayment terms before accepting a loan.
+                        </p>
+                    </div>
+
+                    <div class="side-card support-card">
+                        <div class="support-icon">?</div>
+                        <h3>Need help applying?</h3>
+                        <p>Contact our support section if you need assistance.</p>
+                        <a href="help-support.html">Visit Help &amp; Support →</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>© <span id="current-year">2026</span> METRO LOAN. All rights reserved.</p>
+                <p>Manage your finances with clarity and confidence.</p>
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</body>
+</html>

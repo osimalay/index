@@ -2,6 +2,8 @@
    ROOT VARIABLES
 ============================== */
 
+@import url("./index.css");
+
 :root {
     --navy: #102a43;
     --green: #19c99b;
@@ -16,7 +18,6 @@
 
     --shadow: 0 12px 35px rgba(16, 42, 67, 0.08);
 }
-
 
 /* ==============================
    GENERAL STYLES
@@ -44,32 +45,10 @@ a {
     text-decoration: none;
 }
 
-
 /* ==============================
-   NAVIGATION
+   FOOTER BRAND
 ============================== */
 
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 94px;
-    background: var(--white);
-    border-bottom: 1px solid #f0f2f1;
-}
-
-.nav-container {
-    width: min(1180px, calc(100% - 64px));
-    height: 100%;
-    margin: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-}
-
-.brand,
 .footer-brand {
     display: inline-flex;
     align-items: center;
@@ -77,127 +56,9 @@ a {
     flex-shrink: 0;
 }
 
-.brand-mark {
-    width: 47px;
-    height: 47px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--white);
-    background: var(--green);
-
-    border-radius: 5px 17px 5px 17px;
-
-    font-family: Arial, sans-serif;
-    font-size: 29px;
-    font-weight: 800;
-    font-style: italic;
-}
-
-.brand-name {
-    color: var(--navy);
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: -0.8px;
-    white-space: nowrap;
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.main-nav a {
-    position: relative;
-    color: var(--navy);
-    font-size: 17px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: color 0.2s ease;
-}
-
-.main-nav a:hover,
-.main-nav a.active {
-    color: var(--green-dark);
-}
-
-.main-nav a.active {
-    font-weight: 700;
-}
-
-.main-nav a.active::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-
-    width: 100%;
-    height: 2px;
-
-    background: var(--green);
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 21px;
-    flex-shrink: 0;
-}
-
-.login-link {
-    color: var(--navy);
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.nav-button {
-    min-height: 47px;
-    padding: 0 22px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--white);
-    background: var(--green);
-
-    border-radius: 6px;
-
-    font-size: 15px;
-    font-weight: 700;
-
-    transition: background 0.2s ease;
-}
-
-.nav-button:hover,
 .primary-button:hover {
     background: var(--green-dark);
 }
-
-.menu-toggle {
-    display: none;
-    width: 43px;
-    height: 43px;
-
-    border: 1px solid var(--border);
-    border-radius: 6px;
-
-    background: var(--white);
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    display: block;
-    width: 21px;
-    height: 2px;
-    margin: 5px auto;
-
-    background: var(--navy);
-}
-
 
 /* ==============================
    PAGE CONTAINER
@@ -219,7 +80,6 @@ a {
     font-weight: 700;
     letter-spacing: 2px;
 }
-
 
 /* ==============================
    PAGE HERO
@@ -244,7 +104,6 @@ a {
     max-width: 650px;
     color: var(--muted);
 }
-
 
 /* ==============================
    FAQ SECTION
@@ -273,7 +132,6 @@ a {
     margin-top: 12px;
     color: var(--muted);
 }
-
 
 /* ==============================
    FAQ QUESTIONS
@@ -328,7 +186,6 @@ a {
     line-height: 1.9;
 }
 
-
 /* ==============================
    FAQ CONTACT CTA
 ============================== */
@@ -364,7 +221,6 @@ a {
 
     font-weight: 700;
 }
-
 
 /* ==============================
    FOOTER
@@ -469,41 +325,13 @@ a {
     font-size: 12px;
 }
 
-
 /* ==============================
    TABLET RESPONSIVENESS
 ============================== */
 
 @media (max-width: 1100px) {
 
-    .nav-container {
-        width: calc(100% - 40px);
-        gap: 15px;
-    }
-
-    .main-nav {
-        gap: 17px;
-    }
-
-    .main-nav a {
-        font-size: 15px;
-    }
-
-    .brand-name {
-        font-size: 20px;
-    }
-
-    .nav-actions {
-        gap: 12px;
-    }
-
-    .nav-button {
-        padding: 0 14px;
-        font-size: 13px;
-    }
-
 }
-
 
 /* ==============================
    MOBILE RESPONSIVENESS
@@ -511,70 +339,10 @@ a {
 
 @media (max-width: 760px) {
 
-    .site-header {
-        height: 76px;
-    }
-
-    .nav-container,
     .page-container,
     .footer-main,
     .footer-bottom {
         width: calc(100% - 36px);
-    }
-
-    .brand-mark {
-        width: 40px;
-        height: 40px;
-        font-size: 25px;
-    }
-
-    .brand-name {
-        font-size: 19px;
-    }
-
-    .menu-toggle {
-        display: block;
-        margin-left: auto;
-    }
-
-    .main-nav {
-        position: absolute;
-        top: 76px;
-        left: 0;
-        right: 0;
-
-        display: none;
-        padding: 12px 23px 20px;
-
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-
-        background: var(--white);
-        border-top: 1px solid var(--border);
-        box-shadow: var(--shadow);
-    }
-
-    .main-nav.open {
-        display: flex;
-    }
-
-    .main-nav a {
-        min-height: 44px;
-
-        display: flex;
-        align-items: center;
-
-        font-size: 16px;
-    }
-
-    .main-nav a.active::after {
-        bottom: 0;
-        width: 35px;
-    }
-
-    .nav-actions {
-        display: none;
     }
 
     .footer-main {
@@ -583,7 +351,6 @@ a {
     }
 
 }
-
 
 /* ==============================
    SMALL PHONE RESPONSIVENESS

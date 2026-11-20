@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO & Page Settings | METRO LOAN Command Desk</title>
+    <link rel="stylesheet" href="../css/admin-seo.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="seo"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>SEO &amp; Page Settings</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <section class="welcome-section">
+                <div>
+                    <span class="section-label">WEBSITE CONTROL</span>
+                    <h2>Search Engine Optimisation</h2>
+                    <p>Configure how METRO LOAN pages appear in search engines and when shared online.</p>
+                </div>
+            </section>
+
+            <section class="seo-summary">
+                <article class="summary-card">
+                    <div class="summary-icon blue-icon">⌕</div>
+                    <div>
+                        <span>Website SEO Status</span>
+                        <strong>—</strong>
+                        <small>Overall configuration</small>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon purple-icon">▤</div>
+                    <div>
+                        <span>Indexed Pages</span>
+                        <strong>—</strong>
+                        <small>Search engine coverage</small>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon green-icon">↗</div>
+                    <div>
+                        <span>Organic Traffic</span>
+                        <strong>—</strong>
+                        <small>Search visits</small>
+                    </div>
+                </article>
+            </section>
+
+            <section class="seo-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Global SEO Settings</h3>
+                        <p>Set the default search appearance for METRO LOAN.</p>
+                    </div>
+                </div>
+
+                <form id="globalSeoForm">
+                    <div class="form-group">
+                        <label for="siteTitle">Default Website Title</label>
+                        <input type="text" id="siteTitle" value="METRO LOAN | Instant Personal Cash Loans" maxlength="70">
+                        <small>Recommended: keep titles concise and descriptive.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="siteDescription">Default Meta Description</label>
+                        <textarea id="siteDescription" rows="3" maxlength="160">Explore METRO LOAN for personal loan options and clear information to help you make thoughtful financial decisions.</textarea>
+                        <small>Write a clear description of your website.</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="siteKeywords">Website Keywords</label>
+                        <input type="text" id="siteKeywords" placeholder="personal loans, cash loans, loan services">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="siteCanonical">Website Canonical URL</label>
+                        <input type="url" id="siteCanonical" placeholder="https://www.yourwebsite.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="defaultRobots">Default Search Engine Instructions</label>
+                        <select id="defaultRobots">
+                            <option value="index, follow">Index and follow links</option>
+                            <option value="noindex, follow">Do not index, follow links</option>
+                            <option value="index, nofollow">Index, do not follow links</option>
+                            <option value="noindex, nofollow">Do not index or follow links</option>
+                        </select>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn-secondary">Reset</button>
+                        <button type="submit" class="btn-primary">Save SEO Settings</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="seo-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Page SEO Management</h3>
+                        <p>Configure individual search settings for each website page.</p>
+                    </div>
+                </div>
+
+                <div class="table-tools">
+                    <input type="search" id="pageSearch" placeholder="Search pages...">
+                    <select id="pageFilter">
+                        <option value="all">All page types</option>
+                        <option value="public">Public pages</option>
+                        <option value="account">Account pages</option>
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="seo-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Page URL</th>
+                                <th>Page Type</th>
+                                <th>SEO Title</th>
+                                <th>Indexing</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="seoPageTable">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="empty-state" id="seoEmptyState">
+                    <div class="empty-icon">⌕</div>
+                    <h3>No page SEO records</h3>
+                    <p>Page SEO entries will appear here when they are available.</p>
+                </div>
+            </section>
+
+            <section class="seo-two-column">
+
+                <div class="seo-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Social Sharing Metadata</h3>
+                            <p>Control how your website appears when shared.</p>
+                        </div>
+                    </div>
+
+                    <form id="socialSeoForm">
+                        <div class="form-group">
+                            <label for="ogTitle">Social Share Title</label>
+                            <input type="text" id="ogTitle" placeholder="Enter social share title">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ogDescription">Social Share Description</label>
+                            <textarea id="ogDescription" rows="3" placeholder="Enter social share description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ogImage">Social Share Image URL</label>
+                            <input type="url" id="ogImage" placeholder="https://example.com/image.jpg">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="twitterCard">Social Card Type</label>
+                            <select id="twitterCard">
+                                <option value="summary_large_image">Large image card</option>
+                                <option value="summary">Summary card</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-button">Save Social Settings</button>
+                    </form>
+                </div>
+
+                <div class="seo-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Sitemap & Search Engines</h3>
+                            <p>Manage sitemap and crawler preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>XML Sitemap</strong>
+                            <p>Include eligible website pages in the sitemap.</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="sitemapEnabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="setting-row">
+                        <div>
+                            <strong>Robots.txt</strong>
+                            <p>Manage search engine crawler instructions.</p>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="robotsEnabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="form-group sitemap-url">
+                        <label for="sitemapUrl">Sitemap URL</label>
+                        <input type="url" id="sitemapUrl" placeholder="https://www.yourwebsite.com/sitemap.xml">
+                    </div>
+
+                    <button type="button" class="btn-secondary full-button" id="sitemapCopy">
+                        Copy Sitemap URL
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="seo-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Structured Data</h3>
+                        <p>Configure structured information for search engines.</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="schemaType">Website Schema Type</label>
+                    <select id="schemaType">
+                        <option value="Organization">Organization</option>
+                        <option value="FinancialService">Financial Service</option>
+                        <option value="WebSite">Website</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="schemaName">Business / Website Name</label>
+                    <input type="text" id="schemaName" value="METRO LOAN">
+                </div>
+
+                <div class="form-group">
+                    <label for="schemaUrl">Website URL</label>
+                    <input type="url" id="schemaUrl" placeholder="https://www.yourwebsite.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="schemaDescription">Structured Data Description</label>
+                    <textarea id="schemaDescription" rows="3" placeholder="Describe your website or organisation"></textarea>
+                </div>
+
+                <button type="button" class="btn-primary" id="saveSchema">Save Structured Data</button>
+            </section>
+
+            <footer class="admin-footer">
+                <p>© 2026 METRO LOAN. All rights reserved.</p>
+                <span>Command Desk</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const globalSeoForm = document.getElementById("globalSeoForm");
+    const socialSeoForm = document.getElementById("socialSeoForm");
+
+    globalSeoForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("SEO settings are ready for integration.");
+    });
+
+    socialSeoForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Social sharing settings are ready for integration.");
+    });
+
+    document.getElementById("saveSchema").addEventListener("click", function () {
+        alert("Structured data settings are ready for integration.");
+    });
+
+    document.getElementById("sitemapCopy").addEventListener("click", function () {
+        const sitemapUrl = document.getElementById("sitemapUrl").value.trim();
+
+        if (!sitemapUrl) {
+            alert("Enter a sitemap URL first.");
+            return;
+        }
+
+        if (navigator.clipboard && window.isSecureContext) {
+            navigator.clipboard.writeText(sitemapUrl)
+                .then(() => alert("Sitemap URL copied."));
+        } else {
+            const temporaryInput = document.createElement("textarea");
+            temporaryInput.value = sitemapUrl;
+            document.body.appendChild(temporaryInput);
+            temporaryInput.select();
+            document.execCommand("copy");
+            temporaryInput.remove();
+            alert("Sitemap URL copied.");
+        }
+    });
+
+    const pageSearch = document.getElementById("pageSearch");
+    const pageFilter = document.getElementById("pageFilter");
+
+    function filterSeoPages() {
+        const rows = document.querySelectorAll("#seoPageTable tr");
+        const searchTerm = pageSearch.value.toLowerCase();
+        const filterValue = pageFilter.value;
+
+        rows.forEach(function (row) {
+            const matchesSearch = row.textContent.toLowerCase().includes(searchTerm);
+            const matchesType = filterValue === "all" || row.dataset.type === filterValue;
+            row.style.display = matchesSearch && matchesType ? "" : "none";
+        });
+    }
+
+    pageSearch.addEventListener("input", filterSeoPages);
+    pageFilter.addEventListener("change", filterSeoPages);
+
+});
+</script>
+
+</body>
+</html>

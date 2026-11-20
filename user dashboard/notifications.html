@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your METRO LOAN account notifications and updates.">
+    <title>Notifications | METRO LOAN</title>
+
+    <link rel="stylesheet" href="../css/notifications.css">
+    <script src="../js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="overview.html" class="sidebar-brand">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+            <div class="sidebar-label">MAIN MENU</div>
+
+            <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+                <a href="overview.html" class="sidebar-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="apply-for-loan.html" class="sidebar-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Apply for a Loan</span>
+                </a>
+
+                <a href="my-loans.html" class="sidebar-link">
+                    <span class="nav-icon">▤</span>
+                    <span>My Loans</span>
+                </a>
+
+                <a href="repayment-schedule.html" class="sidebar-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Repayment Schedule</span>
+                </a>
+
+                <a href="transaction-history.html" class="sidebar-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transaction History</span>
+                </a>
+
+                <div class="sidebar-label account-label">ACCOUNT</div>
+
+                <a href="my-profile.html" class="sidebar-link">
+                    <span class="nav-icon">♙</span>
+                    <span>My Profile</span>
+                </a>
+
+                <a href="notifications.html" class="sidebar-link active">
+                    <span class="nav-icon">♧</span>
+                    <span>Notifications</span>
+                    <span class="notification-count">2</span>
+                </a>
+
+                <a href="help-support.html" class="sidebar-link">
+                    <span class="nav-icon">?</span>
+                    <span>Help &amp; Support</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help">
+                    <div class="help-icon">?</div>
+                    <div>
+                        <strong>Need assistance?</strong>
+                        <p>We're here to help.</p>
+                        <a href="help-support.html">Get support →</a>
+                    </div>
+                </div>
+
+                <a href="../login.html" class="logout-link">
+                    <span class="nav-icon">↪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <button class="sidebar-toggle" id="sidebarToggle"
+                            type="button"
+                            aria-label="Open navigation"
+                            aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div>
+                        <p class="header-greeting">USER ACCOUNT</p>
+                        <h1>Notifications</h1>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a href="notifications.html"
+                       class="header-notification"
+                       aria-label="Notifications">
+                        <span>♧</span>
+                        <i></i>
+                    </a>
+
+                    <div class="header-divider"></div>
+
+                    <a href="my-profile.html" class="profile-summary">
+                        <div class="profile-avatar">U</div>
+
+                        <div class="profile-details">
+                            <strong>My Account</strong>
+                            <span>Personal dashboard</span>
+                        </div>
+
+                        <span class="profile-arrow">⌄</span>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE BODY -->
+            <div class="dashboard-content">
+
+                <!-- PAGE INTRODUCTION -->
+                <section class="welcome-section">
+                    <div>
+                        <p class="welcome-label">STAY UPDATED</p>
+                        <h2>Your Notifications</h2>
+                        <p>Keep track of important updates about your account.</p>
+                    </div>
+
+                    <div class="notification-summary">
+                        <span class="summary-bell">♧</span>
+                        <div>
+                            <strong>2 Unread</strong>
+                            <small>Notifications</small>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NOTIFICATION OVERVIEW -->
+                <section class="notification-overview">
+
+                    <div class="notification-overview-card">
+                        <div class="overview-icon unread-icon">●</div>
+                        <div>
+                            <span>Unread notifications</span>
+                            <strong>2</strong>
+                        </div>
+                    </div>
+
+                    <div class="notification-overview-card">
+                        <div class="overview-icon total-icon">♧</div>
+                        <div>
+                            <span>Total notifications</span>
+                            <strong>4</strong>
+                        </div>
+                    </div>
+
+                    <div class="notification-overview-card">
+                        <div class="overview-icon update-icon">✓</div>
+                        <div>
+                            <span>Account updates</span>
+                            <strong>2</strong>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- NOTIFICATION LIST -->
+                <section class="notifications-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Recent Activity</h3>
+                            <p>Updates and messages from METRO LOAN.</p>
+                        </div>
+
+                        <span class="notification-total">4 Notifications</span>
+                    </div>
+
+                    <!-- UNREAD NOTIFICATION -->
+                    <article class="notification-item unread">
+
+                        <div class="notification-icon application-icon">
+                            ✓
+                        </div>
+
+                        <div class="notification-details">
+                            <div class="notification-title-row">
+                                <h4>Welcome to METRO LOAN</h4>
+                                <span class="unread-label">New</span>
+                            </div>
+
+                            <p>
+                                Welcome to your METRO LOAN dashboard.
+                                You can manage your account, explore loan options
+                                and keep track of your financial activities here.
+                            </p>
+
+                            <div class="notification-meta">
+                                <span>Account update</span>
+                                <span>Today</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <!-- UNREAD NOTIFICATION -->
+                    <article class="notification-item unread">
+
+                        <div class="notification-icon security-icon">
+                            !
+                        </div>
+
+                        <div class="notification-details">
+                            <div class="notification-title-row">
+                                <h4>Complete Your Profile</h4>
+                                <span class="unread-label">New</span>
+                            </div>
+
+                            <p>
+                                Please review your personal information and
+                                complete your profile to keep your account details
+                                up to date.
+                            </p>
+
+                            <div class="notification-meta">
+                                <span>Account reminder</span>
+                                <span>Today</span>
+                            </div>
+
+                            <a href="my-profile.html" class="notification-link">
+                                Review profile →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- READ NOTIFICATION -->
+                    <article class="notification-item">
+
+                        <div class="notification-icon information-icon">
+                            i
+                        </div>
+
+                        <div class="notification-details">
+                            <div class="notification-title-row">
+                                <h4>Explore Available Loan Options</h4>
+                                <span class="read-label">Read</span>
+                            </div>
+
+                            <p>
+                                Explore the different loan options available
+                                and learn more about the application process
+                                before making a borrowing decision.
+                            </p>
+
+                            <div class="notification-meta">
+                                <span>Loan information</span>
+                                <span>Yesterday</span>
+                            </div>
+
+                            <a href="apply-for-loan.html" class="notification-link">
+                                Explore loans →
+                            </a>
+                        </div>
+
+                    </article>
+
+                    <!-- READ NOTIFICATION -->
+                    <article class="notification-item">
+
+                        <div class="notification-icon support-icon">
+                            ?
+                        </div>
+
+                        <div class="notification-details">
+                            <div class="notification-title-row">
+                                <h4>Need Help With Your Account?</h4>
+                                <span class="read-label">Read</span>
+                            </div>
+
+                            <p>
+                                Our Help &amp; Support section provides useful
+                                information to guide you when using your
+                                METRO LOAN dashboard.
+                            </p>
+
+                            <div class="notification-meta">
+                                <span>Customer support</span>
+                                <span>Earlier</span>
+                            </div>
+
+                            <a href="help-support.html" class="notification-link">
+                                Get support →
+                            </a>
+                        </div>
+
+                    </article>
+
+                </section>
+
+                <!-- NOTIFICATION INFORMATION -->
+                <section class="notification-information">
+
+                    <div class="information-icon">i</div>
+
+                    <div>
+                        <h3>Stay informed</h3>
+                        <p>
+                            Important account updates and service information
+                            will appear here. Check your notifications regularly
+                            so you don't miss useful updates.
+                        </p>
+                    </div>
+
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+                    <p>© <span id="current-year">2026</span> METRO LOAN. All rights reserved.</p>
+                    <p>Manage your finances with clarity and confidence.</p>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</body>
+</html>

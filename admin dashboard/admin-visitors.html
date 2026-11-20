@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitors & Analytics | METRO LOAN Command Desk</title>
+    <link rel="stylesheet" href="../css/admin-visitors.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="visitors"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Visitors &amp; Analytics</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="page-content">
+
+            <section class="welcome-section">
+                <div>
+                    <span class="section-label">WEBSITE INTELLIGENCE</span>
+                    <h2>Visitor Analytics</h2>
+                    <p>Track visitors, sessions, page views, traffic sources and website engagement.</p>
+                </div>
+
+                <button class="btn-primary" id="refreshAnalytics">↻ Refresh Data</button>
+            </section>
+
+            <section class="analytics-filter">
+                <div class="filter-group">
+                    <label for="dateRange">Reporting Period</label>
+                    <select id="dateRange">
+                        <option value="today">Today</option>
+                        <option value="7days" selected>Last 7 Days</option>
+                        <option value="30days">Last 30 Days</option>
+                        <option value="90days">Last 90 Days</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                </div>
+
+                <div class="filter-group custom-date" id="customDateGroup">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate">
+                </div>
+
+                <div class="filter-group custom-date" id="customEndDateGroup">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate">
+                </div>
+
+                <button class="btn-secondary" id="applyDateFilter">Apply Filter</button>
+            </section>
+
+            <section class="analytics-cards">
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>Total Visitors</span>
+                        <div class="metric-icon blue-bg">◉</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>Unique website visitors</small>
+                </article>
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>Total Sessions</span>
+                        <div class="metric-icon purple-bg">◷</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>Visitor browsing sessions</small>
+                </article>
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>Page Views</span>
+                        <div class="metric-icon green-bg">▤</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>Total pages viewed</small>
+                </article>
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>Average Session</span>
+                        <div class="metric-icon orange-bg">◴</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>Average visit duration</small>
+                </article>
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>Bounce Rate</span>
+                        <div class="metric-icon red-bg">↘</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>Single-page sessions</small>
+                </article>
+
+                <article class="analytics-card">
+                    <div class="analytics-card-top">
+                        <span>New Visitors</span>
+                        <div class="metric-icon teal-bg">♙</div>
+                    </div>
+                    <strong>—</strong>
+                    <small>First-time visitors</small>
+                </article>
+
+            </section>
+
+            <section class="analytics-grid">
+
+                <div class="analytics-panel traffic-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Website Traffic Overview</h3>
+                            <p>Visitor activity over the selected period.</p>
+                        </div>
+                        <span class="panel-tag">Traffic</span>
+                    </div>
+
+                    <div class="chart-placeholder">
+                        <div class="chart-icon">▥</div>
+                        <h4>Traffic chart</h4>
+                        <p>Visitor traffic data will appear here.</p>
+                    </div>
+                </div>
+
+                <div class="analytics-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Traffic Sources</h3>
+                            <p>Where your visitors come from.</p>
+                        </div>
+                    </div>
+
+                    <div class="source-list">
+                        <div class="source-item">
+                            <div class="source-info">
+                                <span class="source-dot direct-dot"></span>
+                                <strong>Direct Traffic</strong>
+                            </div>
+                            <span>—</span>
+                        </div>
+
+                        <div class="source-item">
+                            <div class="source-info">
+                                <span class="source-dot search-dot"></span>
+                                <strong>Search Engines</strong>
+                            </div>
+                            <span>—</span>
+                        </div>
+
+                        <div class="source-item">
+                            <div class="source-info">
+                                <span class="source-dot social-dot"></span>
+                                <strong>Social Media</strong>
+                            </div>
+                            <span>—</span>
+                        </div>
+
+                        <div class="source-item">
+                            <div class="source-info">
+                                <span class="source-dot referral-dot"></span>
+                                <strong>Referral Websites</strong>
+                            </div>
+                            <span>—</span>
+                        </div>
+
+                        <div class="source-item">
+                            <div class="source-info">
+                                <span class="source-dot other-dot"></span>
+                                <strong>Other Sources</strong>
+                            </div>
+                            <span>—</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="analytics-grid">
+
+                <div class="analytics-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Visitor Devices</h3>
+                            <p>Devices used to access your website.</p>
+                        </div>
+                    </div>
+
+                    <div class="device-list">
+                        <div class="device-item">
+                            <div class="device-icon">▣</div>
+                            <div class="device-details">
+                                <strong>Mobile</strong>
+                                <span>Smartphones and mobile devices</span>
+                            </div>
+                            <b>—</b>
+                        </div>
+
+                        <div class="device-item">
+                            <div class="device-icon">▤</div>
+                            <div class="device-details">
+                                <strong>Desktop</strong>
+                                <span>Desktop and laptop computers</span>
+                            </div>
+                            <b>—</b>
+                        </div>
+
+                        <div class="device-item">
+                            <div class="device-icon">▭</div>
+                            <div class="device-details">
+                                <strong>Tablet</strong>
+                                <span>Tablet devices</span>
+                            </div>
+                            <b>—</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="analytics-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Visitor Locations</h3>
+                            <p>Geographical distribution of visitors.</p>
+                        </div>
+                    </div>
+
+                    <div class="location-empty">
+                        <div class="location-icon">◎</div>
+                        <h4>Location analytics</h4>
+                        <p>Visitor location information will appear here when available.</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="analytics-panel popular-pages-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Most Visited Pages</h3>
+                        <p>Pages receiving the most visitor attention.</p>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="analytics-table">
+                        <thead>
+                            <tr>
+                                <th>Page</th>
+                                <th>Page Address</th>
+                                <th>Page Views</th>
+                                <th>Unique Visitors</th>
+                                <th>Average Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="popularPagesTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-empty">
+                    <div class="empty-symbol">▤</div>
+                    <h4>No page activity available</h4>
+                    <p>Page performance information will appear here.</p>
+                </div>
+            </section>
+
+            <section class="analytics-panel visitor-sessions-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Recent Visitor Sessions</h3>
+                        <p>Review website session activity.</p>
+                    </div>
+                </div>
+
+                <div class="table-tools">
+                    <input type="search" id="sessionSearch" placeholder="Search sessions...">
+                    <select id="sessionDeviceFilter">
+                        <option value="all">All devices</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="tablet">Tablet</option>
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="analytics-table">
+                        <thead>
+                            <tr>
+                                <th>Session ID</th>
+                                <th>Visitor</th>
+                                <th>Entry Page</th>
+                                <th>Device</th>
+                                <th>Traffic Source</th>
+                                <th>Visit Time</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody id="visitorSessionsTable"></tbody>
+                    </table>
+                </div>
+
+                <div class="table-empty">
+                    <div class="empty-symbol">◷</div>
+                    <h4>No visitor sessions available</h4>
+                    <p>Visitor session records will appear here.</p>
+                </div>
+            </section>
+
+            <footer class="admin-footer">
+                <p>© 2026 METRO LOAN. All rights reserved.</p>
+                <span>Command Desk</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dateRange = document.getElementById("dateRange");
+    const customDateGroup = document.getElementById("customDateGroup");
+    const customEndDateGroup = document.getElementById("customEndDateGroup");
+
+    function updateDateFields() {
+        const isCustom = dateRange.value === "custom";
+        customDateGroup.style.display = isCustom ? "block" : "none";
+        customEndDateGroup.style.display = isCustom ? "block" : "none";
+    }
+
+    dateRange.addEventListener("change", updateDateFields);
+    updateDateFields();
+
+    document.getElementById("applyDateFilter").addEventListener("click", function () {
+        if (dateRange.value === "custom") {
+            const start = document.getElementById("startDate").value;
+            const end = document.getElementById("endDate").value;
+
+            if (!start || !end) {
+                alert("Please select both the start date and end date.");
+                return;
+            }
+
+            if (start > end) {
+                alert("The start date cannot be later than the end date.");
+                return;
+            }
+        }
+
+        alert("The selected analytics filter is ready for integration.");
+    });
+
+    document.getElementById("refreshAnalytics").addEventListener("click", function () {
+        alert("Analytics refresh is ready for integration.");
+    });
+
+    const sessionSearch = document.getElementById("sessionSearch");
+    const sessionDeviceFilter = document.getElementById("sessionDeviceFilter");
+
+    function filterSessions() {
+        const rows = document.querySelectorAll("#visitorSessionsTable tr");
+        const searchTerm = sessionSearch.value.toLowerCase();
+        const device = sessionDeviceFilter.value;
+
+        rows.forEach(function (row) {
+            const matchesSearch = row.textContent.toLowerCase().includes(searchTerm);
+            const matchesDevice = device === "all" || row.dataset.device === device;
+
+            row.style.display = matchesSearch && matchesDevice ? "" : "none";
+        });
+    }
+
+    sessionSearch.addEventListener("input", filterSessions);
+    sessionDeviceFilter.addEventListener("change", filterSessions);
+
+});
+</script>
+
+</body>
+</html>

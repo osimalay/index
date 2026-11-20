@@ -10,10 +10,12 @@
     <title>Create Account | METRO LOAN</title>
 
     <link rel="stylesheet" href="css/register.css">
-    <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/site-footer.css">
+    <link rel="stylesheet" href="css/public-shared.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="js/main.js" defer></script>
     <script src="js/site-chrome.js" defer></script>
+    <script src="js/auth.js" defer></script>
 </head>
 
 <body>
@@ -48,12 +50,11 @@
                 <a href="calculator.html">Calculator</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="login-link">Login</a>
+                    <a href="register.html" class="nav-button">Get Started</a>
+                </div>
             </nav>
-
-            <div class="nav-actions">
-                <a href="login.html" class="login-link">Login</a>
-                <a href="register.html" class="nav-button">Get Started</a>
-            </div>
 
         </div>
     </header>
@@ -80,7 +81,7 @@
 
 
             <!-- REGISTRATION FORM -->
-            <form>
+            <form id="register-form">
 
                 <label for="register-name">
                     Full Name
@@ -90,6 +91,7 @@
                     type="text"
                     id="register-name"
                     placeholder="Enter your full name"
+                    autocomplete="name"
                     required
                 >
 
@@ -102,6 +104,7 @@
                     type="email"
                     id="register-email"
                     placeholder="Enter your email address"
+                    autocomplete="email"
                     required
                 >
 
@@ -114,6 +117,7 @@
                     type="tel"
                     id="register-phone"
                     placeholder="Enter your phone number"
+                    autocomplete="tel"
                     required
                 >
 
@@ -126,6 +130,8 @@
                     type="password"
                     id="register-password"
                     placeholder="Create a password"
+                    autocomplete="new-password"
+                    minlength="8"
                     required
                 >
 
@@ -143,13 +149,13 @@
 
                 </label>
 
+                <p class="auth-message" id="auth-message" role="alert" aria-live="polite" hidden></p>
 
                 <button
-                    type="button"
-                    class="primary-button"
-                    disabled>
+                    type="submit"
+                    class="primary-button">
 
-                    Registration Feature Coming Soon
+                    Create Account
 
                 </button>
 
@@ -163,8 +169,7 @@
 
 
             <p class="auth-note">
-                This is a frontend demonstration.
-                Account registration is not connected yet.
+                Frontend-only demo: account data stays in this browser and is not secured by a server.
             </p>
 
         </div>

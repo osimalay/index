@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Management | METRO LOAN Command Desk</title>
+    <link rel="stylesheet" href="../css/admin-pages.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="pages"></aside>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Page Management</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="pages-intro">
+                <div>
+                    <span class="section-eyebrow">WEBSITE CONTROL</span>
+                    <h2>Manage Website Pages</h2>
+                    <p>Create, organise, edit and manage every page on the METRO LOAN website.</p>
+                </div>
+
+                <button type="button" class="create-page-button" id="openCreatePage">
+                    <span>＋</span> Create New Page
+                </button>
+            </section>
+
+            <section class="page-overview-grid">
+
+                <article class="page-stat-card">
+                    <span class="page-stat-icon blue-stat">▤</span>
+                    <div>
+                        <small>TOTAL PAGES</small>
+                        <h3>—</h3>
+                    </div>
+                </article>
+
+                <article class="page-stat-card">
+                    <span class="page-stat-icon green-stat">✓</span>
+                    <div>
+                        <small>PUBLISHED</small>
+                        <h3>—</h3>
+                    </div>
+                </article>
+
+                <article class="page-stat-card">
+                    <span class="page-stat-icon orange-stat">◷</span>
+                    <div>
+                        <small>DRAFTS</small>
+                        <h3>—</h3>
+                    </div>
+                </article>
+
+                <article class="page-stat-card">
+                    <span class="page-stat-icon purple-stat">◉</span>
+                    <div>
+                        <small>HIDDEN PAGES</small>
+                        <h3>—</h3>
+                    </div>
+                </article>
+
+            </section>
+
+            <section class="page-management-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <span class="section-eyebrow">PAGE DIRECTORY</span>
+                        <h3>Website Pages</h3>
+                        <p>Search and manage the pages belonging to your website.</p>
+                    </div>
+                </div>
+
+                <div class="page-toolbar">
+
+                    <div class="page-search">
+                        <span>⌕</span>
+                        <input type="search" id="pageSearch" placeholder="Search website pages..." aria-label="Search website pages">
+                    </div>
+
+                    <div class="page-filters">
+                        <select id="pageTypeFilter" aria-label="Filter by page type">
+                            <option value="all">All Page Types</option>
+                            <option value="public">Public Pages</option>
+                            <option value="account">Account Pages</option>
+                            <option value="dashboard">Dashboard Pages</option>
+                        </select>
+
+                        <select id="pageStatusFilter" aria-label="Filter by page status">
+                            <option value="all">All Statuses</option>
+                            <option value="published">Published</option>
+                            <option value="draft">Draft</option>
+                            <option value="hidden">Hidden</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="table-container">
+
+                    <table class="pages-table">
+                        <thead>
+                            <tr>
+                                <th>PAGE NAME</th>
+                                <th>PAGE ADDRESS</th>
+                                <th>PAGE TYPE</th>
+                                <th>STATUS</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="pagesTableBody">
+                            <tr class="empty-row">
+                                <td colspan="5">
+                                    <div class="empty-state">
+                                        <span class="empty-icon">▤</span>
+                                        <h4>No page records available</h4>
+                                        <p>Website page records will appear here when available.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </section>
+
+            <section class="page-tools-section">
+
+                <div class="panel-header">
+                    <div>
+                        <span class="section-eyebrow">PAGE CONTROLS</span>
+                        <h3>Page Administration</h3>
+                        <p>Manage the structure and availability of your website pages.</p>
+                    </div>
+                </div>
+
+                <div class="page-tools-grid">
+
+                    <a href="admin-website-editor.html" class="page-tool-card">
+                        <span class="tool-icon">✎</span>
+                        <span>
+                            <strong>Edit Page Content</strong>
+                            <small>Manage headings, text, images and page sections.</small>
+                        </span>
+                        <span class="tool-arrow">→</span>
+                    </a>
+
+                    <a href="admin-navigation.html" class="page-tool-card">
+                        <span class="tool-icon">☷</span>
+                        <span>
+                            <strong>Manage Navigation</strong>
+                            <small>Control how website pages appear in navigation.</small>
+                        </span>
+                        <span class="tool-arrow">→</span>
+                    </a>
+
+                    <a href="admin-seo.html" class="page-tool-card">
+                        <span class="tool-icon">⌕</span>
+                        <span>
+                            <strong>SEO Settings</strong>
+                            <small>Manage page titles, descriptions and search settings.</small>
+                        </span>
+                        <span class="tool-arrow">→</span>
+                    </a>
+
+                    <a href="admin-media.html" class="page-tool-card">
+                        <span class="tool-icon">▧</span>
+                        <span>
+                            <strong>Page Media</strong>
+                            <small>Manage images and other page media.</small>
+                        </span>
+                        <span class="tool-arrow">→</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+            <section class="create-page-panel" id="createPagePanel" hidden>
+
+                <div class="create-panel-heading">
+                    <div>
+                        <span class="section-eyebrow">NEW WEBSITE PAGE</span>
+                        <h3>Create a Page</h3>
+                    </div>
+
+                    <button type="button" class="close-panel-button" id="closeCreatePage" aria-label="Close create page form">×</button>
+                </div>
+
+                <form id="createPageForm">
+
+                    <div class="create-form-grid">
+
+                        <div class="form-group">
+                            <label for="newPageName">Page Name</label>
+                            <input type="text" id="newPageName" name="pageName" placeholder="Enter page name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newPageSlug">Page Address / Slug</label>
+                            <input type="text" id="newPageSlug" name="pageSlug" placeholder="example-page.html" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newPageType">Page Type</label>
+                            <select id="newPageType" name="pageType" required>
+                                <option value="">Select page type</option>
+                                <option value="public">Public Page</option>
+                                <option value="account">Account Page</option>
+                                <option value="dashboard">Dashboard Page</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="newPageStatus">Initial Status</label>
+                            <select id="newPageStatus" name="pageStatus" required>
+                                <option value="draft">Draft</option>
+                                <option value="published">Published</option>
+                                <option value="hidden">Hidden</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="newPageDescription">Page Description</label>
+                            <textarea id="newPageDescription" name="pageDescription" rows="3" placeholder="Enter a short description of this page"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="create-form-actions">
+                        <button type="button" class="cancel-button" id="cancelCreatePage">Cancel</button>
+                        <button type="submit" class="save-page-button">Create Page <span>→</span></button>
+                    </div>
+
+                </form>
+
+            </section>
+
+        </div>
+
+        <footer class="admin-footer">
+            <span>© 2026 METRO LOAN. All rights reserved.</span>
+            <span>Command Desk</span>
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+    const createPagePanel = document.getElementById("createPagePanel");
+    const openCreatePage = document.getElementById("openCreatePage");
+    const closeCreatePage = document.getElementById("closeCreatePage");
+    const cancelCreatePage = document.getElementById("cancelCreatePage");
+    const createPageForm = document.getElementById("createPageForm");
+
+    function showCreatePageForm() {
+        createPagePanel.hidden = false;
+        createPagePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function hideCreatePageForm() {
+        createPagePanel.hidden = true;
+        createPageForm.reset();
+    }
+
+    openCreatePage.addEventListener("click", showCreatePageForm);
+    closeCreatePage.addEventListener("click", hideCreatePageForm);
+    cancelCreatePage.addEventListener("click", hideCreatePageForm);
+
+    const pageSearch = document.getElementById("pageSearch");
+    const pageTypeFilter = document.getElementById("pageTypeFilter");
+    const pageStatusFilter = document.getElementById("pageStatusFilter");
+
+    function filterPageTable() {
+        const searchValue = pageSearch.value.trim().toLowerCase();
+
+        document.querySelectorAll("#pagesTableBody tr[data-page-name]").forEach(row => {
+            const name = row.dataset.pageName.toLowerCase();
+            const address = row.dataset.pageAddress.toLowerCase();
+            const type = row.dataset.pageType;
+            const status = row.dataset.pageStatus;
+
+            const matchesSearch = name.includes(searchValue) || address.includes(searchValue);
+            const matchesType = pageTypeFilter.value === "all" || type === pageTypeFilter.value;
+            const matchesStatus = pageStatusFilter.value === "all" || status === pageStatusFilter.value;
+
+            row.hidden = !(matchesSearch && matchesType && matchesStatus);
+        });
+    }
+
+    pageSearch.addEventListener("input", filterPageTable);
+    pageTypeFilter.addEventListener("change", filterPageTable);
+    pageStatusFilter.addEventListener("change", filterPageTable);
+
+    createPageForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+    });
+</script>
+
+</body>
+</html>

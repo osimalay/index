@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="METRO LOAN Command Desk - Website Appearance Management">
+    <title>Website Appearance | METRO LOAN Command Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin-appearance.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="appearance"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Website Appearance</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="page-intro">
+                <div>
+                    <span class="section-kicker">DESIGN &amp; BRANDING</span>
+                    <h2>Website Appearance Settings</h2>
+                    <p>Manage the colours, typography, buttons, logo and visual style of the METRO LOAN website.</p>
+                </div>
+            </section>
+
+            <!-- BRAND IDENTITY -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Brand Identity</h3>
+                    <p>Manage the main visual identity used across your website.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="brandName">Website Brand Name</label>
+                        <input type="text" id="brandName" value="METRO LOAN">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="brandTagline">Brand Tagline</label>
+                        <input type="text" id="brandTagline" placeholder="Enter your brand tagline">
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="logoPath">Logo Image Path</label>
+                        <input type="text" id="logoPath" placeholder="Enter logo image path, for example images/logo.png">
+                        <small class="field-hint">Enter the path of the logo file you want to use.</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="faviconPath">Favicon Image Path</label>
+                        <input type="text" id="faviconPath" placeholder="Enter favicon image path">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="brandAlt">Logo Alternative Text</label>
+                        <input type="text" id="brandAlt" value="METRO LOAN">
+                    </div>
+                </div>
+            </section>
+
+            <!-- COLOUR PALETTE -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Website Colour Palette</h3>
+                    <p>Choose the colours used for backgrounds, text, buttons and website highlights.</p>
+                </div>
+
+                <div class="color-grid">
+                    <div class="color-field">
+                        <label for="primaryColor">Primary Blue</label>
+                        <div class="color-control">
+                            <input type="color" id="primaryColor" value="#1677e8">
+                            <input type="text" id="primaryColorText" value="#1677e8" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="secondaryColor">Deep Navy</label>
+                        <div class="color-control">
+                            <input type="color" id="secondaryColor" value="#102a43">
+                            <input type="text" id="secondaryColorText" value="#102a43" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="accentColor">Accent Green</label>
+                        <div class="color-control">
+                            <input type="color" id="accentColor" value="#19c99b">
+                            <input type="text" id="accentColorText" value="#19c99b" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="backgroundColor">Page Background</label>
+                        <div class="color-control">
+                            <input type="color" id="backgroundColor" value="#f7fbf9">
+                            <input type="text" id="backgroundColorText" value="#f7fbf9" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="surfaceColor">Card Background</label>
+                        <div class="color-control">
+                            <input type="color" id="surfaceColor" value="#ffffff">
+                            <input type="text" id="surfaceColorText" value="#ffffff" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="textColor">Main Text</label>
+                        <div class="color-control">
+                            <input type="color" id="textColor" value="#111111">
+                            <input type="text" id="textColorText" value="#111111" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="mutedColor">Muted Text</label>
+                        <div class="color-control">
+                            <input type="color" id="mutedColor" value="#626b68">
+                            <input type="text" id="mutedColorText" value="#626b68" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="color-field">
+                        <label for="borderColor">Border Colour</label>
+                        <div class="color-control">
+                            <input type="color" id="borderColor" value="#e5eeea">
+                            <input type="text" id="borderColorText" value="#e5eeea" maxlength="7">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="palette-actions">
+                    <button type="button" class="secondary-button" id="resetColors">Restore Original Colours</button>
+                </div>
+            </section>
+
+            <!-- GRADIENT SETTINGS -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Gradient Settings</h3>
+                    <p>Set the gradient colours used for selected website backgrounds and visual elements.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="gradientStart">Gradient Start Colour</label>
+                        <div class="color-control">
+                            <input type="color" id="gradientStart" value="#102a43">
+                            <input type="text" id="gradientStartText" value="#102a43" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="gradientEnd">Gradient End Colour</label>
+                        <div class="color-control">
+                            <input type="color" id="gradientEnd" value="#1677e8">
+                            <input type="text" id="gradientEndText" value="#1677e8" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="gradientDirection">Gradient Direction</label>
+                        <select id="gradientDirection">
+                            <option value="to right">Left to Right</option>
+                            <option value="to left">Right to Left</option>
+                            <option value="to bottom">Top to Bottom</option>
+                            <option value="to bottom right">Diagonal</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gradient-preview" id="gradientPreview">
+                    <span>METRO LOAN</span>
+                    <small>Gradient preview</small>
+                </div>
+            </section>
+
+            <!-- TYPOGRAPHY -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Typography</h3>
+                    <p>Choose the fonts and text sizes used throughout your website.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="headingFont">Heading Font</label>
+                        <select id="headingFont">
+                            <option value="Manrope">Manrope</option>
+                            <option value="DM Sans">DM Sans</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="system-ui">System UI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="bodyFont">Body Font</label>
+                        <select id="bodyFont">
+                            <option value="DM Sans">DM Sans</option>
+                            <option value="Manrope">Manrope</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="system-ui">System UI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="headingWeight">Heading Font Weight</label>
+                        <select id="headingWeight">
+                            <option value="600">Semi Bold</option>
+                            <option value="700">Bold</option>
+                            <option value="800" selected>Extra Bold</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="bodySize">Body Text Size</label>
+                        <select id="bodySize">
+                            <option value="14px">Small - 14px</option>
+                            <option value="15px" selected>Regular - 15px</option>
+                            <option value="16px">Large - 16px</option>
+                            <option value="17px">Extra Large - 17px</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="headingSize">Main Heading Size</label>
+                        <select id="headingSize">
+                            <option value="36px">36px</option>
+                            <option value="42px" selected>42px</option>
+                            <option value="48px">48px</option>
+                            <option value="54px">54px</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="textAlignment">Default Text Alignment</label>
+                        <select id="textAlignment">
+                            <option value="left">Left</option>
+                            <option value="center">Center</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BUTTON STYLE -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Button Appearance</h3>
+                    <p>Set the default appearance of website action buttons.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="buttonRadius">Button Corner Style</label>
+                        <select id="buttonRadius">
+                            <option value="4px">Square</option>
+                            <option value="8px" selected>Slightly Rounded</option>
+                            <option value="14px">Rounded</option>
+                            <option value="999px">Pill Shape</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="buttonWeight">Button Text Weight</label>
+                        <select id="buttonWeight">
+                            <option value="500">Medium</option>
+                            <option value="600">Semi Bold</option>
+                            <option value="700" selected>Bold</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="buttonTextColor">Button Text Colour</label>
+                        <div class="color-control">
+                            <input type="color" id="buttonTextColor" value="#ffffff">
+                            <input type="text" id="buttonTextColorText" value="#ffffff" maxlength="7">
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="buttonStyle">Button Style</label>
+                        <select id="buttonStyle">
+                            <option value="solid">Solid Colour</option>
+                            <option value="gradient" selected>Gradient</option>
+                            <option value="outline">Outline</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="button-preview-area">
+                    <span>Button preview</span>
+                    <button type="button" class="appearance-preview-button" id="buttonPreview">Get Started</button>
+                </div>
+            </section>
+
+            <!-- LAYOUT -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Layout &amp; Shape Settings</h3>
+                    <p>Control the general appearance of cards and content containers.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="cardRadius">Card Corner Style</label>
+                        <select id="cardRadius">
+                            <option value="6px">Square</option>
+                            <option value="10px">Soft</option>
+                            <option value="16px" selected>Rounded</option>
+                            <option value="22px">Extra Rounded</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="containerWidth">Website Content Width</label>
+                        <select id="containerWidth">
+                            <option value="1100px">1100px</option>
+                            <option value="1200px" selected>1200px</option>
+                            <option value="1300px">1300px</option>
+                            <option value="1400px">1400px</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="shadowStyle">Card Shadow</label>
+                        <select id="shadowStyle">
+                            <option value="none">No Shadow</option>
+                            <option value="soft" selected>Soft Shadow</option>
+                            <option value="medium">Medium Shadow</option>
+                            <option value="strong">Strong Shadow</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="sectionSpacing">Section Spacing</label>
+                        <select id="sectionSpacing">
+                            <option value="40px">Compact</option>
+                            <option value="60px" selected>Regular</option>
+                            <option value="80px">Spacious</option>
+                            <option value="100px">Extra Spacious</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIVE DESIGN PREVIEW -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Design Preview</h3>
+                    <p>See how your selected colours and typography look together.</p>
+                </div>
+
+                <div class="design-preview" id="designPreview">
+                    <div class="preview-header">
+                        <div class="preview-brand">
+                            <span class="preview-logo" id="previewLogo">M</span>
+                            <strong id="previewBrandName">METRO LOAN</strong>
+                        </div>
+                        <span class="preview-menu">Home&nbsp;&nbsp; About&nbsp;&nbsp; Loans&nbsp;&nbsp; Contact</span>
+                    </div>
+
+                    <div class="preview-content">
+                        <span class="preview-eyebrow">FINANCIAL FREEDOM, MADE SIMPLE</span>
+                        <h3 id="previewHeading">ALL YOUR LOAN NEEDS IN ONE PLACE</h3>
+                        <p id="previewParagraph">Clear information. Thoughtful financial decisions.</p>
+                        <button type="button" class="preview-action" id="previewAction">Explore Loan Options</button>
+                    </div>
+
+                    <div class="preview-footer">
+                        <span>METRO LOAN</span>
+                        <span>Simple. Clear. Convenient.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACTIONS -->
+            <section class="appearance-actions">
+                <button type="button" class="secondary-button" id="resetAppearance">Reset Appearance</button>
+                <button type="button" class="primary-button" id="reviewAppearance">Review Appearance</button>
+            </section>
+
+            <p class="inline-feedback" id="appearanceFeedback" aria-live="polite"></p>
+
+            <footer class="admin-footer">
+                <span>© 2026 METRO LOAN. All rights reserved.</span>
+                <span>Command Desk</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    const colorPairs = [
+        ["primaryColor", "primaryColorText"],
+        ["secondaryColor", "secondaryColorText"],
+        ["accentColor", "accentColorText"],
+        ["backgroundColor", "backgroundColorText"],
+        ["surfaceColor", "surfaceColorText"],
+        ["textColor", "textColorText"],
+        ["mutedColor", "mutedColorText"],
+        ["borderColor", "borderColorText"],
+        ["gradientStart", "gradientStartText"],
+        ["gradientEnd", "gradientEndText"],
+        ["buttonTextColor", "buttonTextColorText"]
+    ];
+
+    const originalValues = {};
+    const feedback = document.getElementById("appearanceFeedback");
+
+    const settingIds = [
+        "brandName", "brandTagline", "logoPath", "faviconPath", "brandAlt",
+        "gradientDirection", "headingFont", "bodyFont", "headingWeight",
+        "bodySize", "headingSize", "textAlignment", "buttonRadius",
+        "buttonWeight", "buttonStyle", "cardRadius", "containerWidth",
+        "shadowStyle", "sectionSpacing"
+    ];
+
+    settingIds.forEach(id => {
+        originalValues[id] = document.getElementById(id).value;
+    });
+
+    colorPairs.forEach(([colorId, textId]) => {
+        originalValues[colorId] = document.getElementById(colorId).value;
+        originalValues[textId] = document.getElementById(textId).value;
+    });
+
+    function validHex(value) {
+        return /^#[0-9A-Fa-f]{6}$/.test(value);
+    }
+
+    function updateColorPair(colorId, textId, source) {
+        const colorInput = document.getElementById(colorId);
+        const textInput = document.getElementById(textId);
+
+        if (source === "color") {
+            textInput.value = colorInput.value;
+        } else if (validHex(textInput.value)) {
+            colorInput.value = textInput.value;
+        } else {
+            return;
+        }
+
+        updateAppearancePreview();
+    }
+
+    colorPairs.forEach(([colorId, textId]) => {
+        document.getElementById(colorId).addEventListener("input", () => {
+            updateColorPair(colorId, textId, "color");
+        });
+
+        document.getElementById(textId).addEventListener("change", () => {
+            updateColorPair(colorId, textId, "text");
+        });
+    });
+
+    function updateAppearancePreview() {
+        const root = document.documentElement;
+        const primary = document.getElementById("primaryColor").value;
+        const navy = document.getElementById("secondaryColor").value;
+        const accent = document.getElementById("accentColor").value;
+        const background = document.getElementById("backgroundColor").value;
+        const surface = document.getElementById("surfaceColor").value;
+        const text = document.getElementById("textColor").value;
+        const muted = document.getElementById("mutedColor").value;
+        const border = document.getElementById("borderColor").value;
+
+        const gradientStart = document.getElementById("gradientStart").value;
+        const gradientEnd = document.getElementById("gradientEnd").value;
+        const gradientDirection = document.getElementById("gradientDirection").value;
+
+        const headingFont = document.getElementById("headingFont").value;
+        const bodyFont = document.getElementById("bodyFont").value;
+        const headingWeight = document.getElementById("headingWeight").value;
+        const bodySize = document.getElementById("bodySize").value;
+        const headingSize = document.getElementById("headingSize").value;
+        const alignment = document.getElementById("textAlignment").value;
+
+        const buttonRadius = document.getElementById("buttonRadius").value;
+        const buttonWeight = document.getElementById("buttonWeight").value;
+        const buttonText = document.getElementById("buttonTextColor").value;
+        const buttonStyle = document.getElementById("buttonStyle").value;
+
+        const cardRadius = document.getElementById("cardRadius").value;
+        const shadowStyle = document.getElementById("shadowStyle").value;
+
+        root.style.setProperty("--preview-primary", primary);
+        root.style.setProperty("--preview-navy", navy);
+        root.style.setProperty("--preview-accent", accent);
+        root.style.setProperty("--preview-background", background);
+        root.style.setProperty("--preview-surface", surface);
+        root.style.setProperty("--preview-text", text);
+        root.style.setProperty("--preview-muted", muted);
+        root.style.setProperty("--preview-border", border);
+        root.style.setProperty("--preview-heading-font", headingFont);
+        root.style.setProperty("--preview-body-font", bodyFont);
+        root.style.setProperty("--preview-heading-weight", headingWeight);
+        root.style.setProperty("--preview-body-size", bodySize);
+        root.style.setProperty("--preview-heading-size", headingSize);
+        root.style.setProperty("--preview-alignment", alignment);
+        root.style.setProperty("--preview-card-radius", cardRadius);
+
+        const gradient = `linear-gradient(${gradientDirection}, ${gradientStart}, ${gradientEnd})`;
+
+        const gradientPreview = document.getElementById("gradientPreview");
+        gradientPreview.style.background = gradient;
+
+        const buttonPreview = document.getElementById("buttonPreview");
+        const previewAction = document.getElementById("previewAction");
+
+        [buttonPreview, previewAction].forEach(button => {
+            button.style.borderRadius = buttonRadius;
+            button.style.fontWeight = buttonWeight;
+            button.style.color = buttonText;
+
+            if (buttonStyle === "outline") {
+                button.style.background = "transparent";
+                button.style.border = `2px solid ${primary}`;
+            } else if (buttonStyle === "solid") {
+                button.style.background = primary;
+                button.style.border = `2px solid ${primary}`;
+            } else {
+                button.style.background = `linear-gradient(135deg, ${gradientStart}, ${gradientEnd})`;
+                button.style.border = "2px solid transparent";
+            }
+        });
+
+        const preview = document.getElementById("designPreview");
+        preview.style.background = background;
+        preview.style.borderRadius = cardRadius;
+
+        if (shadowStyle === "none") {
+            preview.style.boxShadow = "none";
+        } else if (shadowStyle === "medium") {
+            preview.style.boxShadow = "0 12px 28px rgba(16,42,67,0.12)";
+        } else if (shadowStyle === "strong") {
+            preview.style.boxShadow = "0 18px 40px rgba(16,42,67,0.2)";
+        } else {
+            preview.style.boxShadow = "0 7px 20px rgba(16,42,67,0.07)";
+        }
+
+        document.querySelector(".preview-header").style.background = surface;
+        document.querySelector(".preview-header").style.borderColor = border;
+        document.querySelector(".preview-brand strong").style.color = navy;
+        document.getElementById("previewLogo").style.background = gradient;
+        document.getElementById("previewLogo").style.borderRadius = buttonRadius;
+        document.getElementById("previewBrandName").textContent =
+            document.getElementById("brandName").value || "METRO LOAN";
+
+        document.getElementById("previewHeading").style.color = navy;
+        document.getElementById("previewHeading").style.fontFamily = headingFont;
+        document.getElementById("previewHeading").style.fontWeight = headingWeight;
+        document.getElementById("previewHeading").style.fontSize = headingSize;
+
+        document.getElementById("previewParagraph").style.color = muted;
+        document.getElementById("previewParagraph").style.fontFamily = bodyFont;
+        document.getElementById("previewParagraph").style.fontSize = bodySize;
+
+        document.querySelector(".preview-content").style.textAlign = alignment;
+        document.querySelector(".preview-content").style.color = text;
+        document.querySelector(".preview-eyebrow").style.color = accent;
+        document.querySelector(".preview-footer").style.background = navy;
+    }
+
+    document.querySelectorAll(".content-panel input, .content-panel select").forEach(control => {
+        control.addEventListener("input", updateAppearancePreview);
+        control.addEventListener("change", updateAppearancePreview);
+    });
+
+    document.getElementById("resetColors").addEventListener("click", function () {
+        colorPairs.slice(0, 8).forEach(([colorId, textId]) => {
+            document.getElementById(colorId).value = originalValues[colorId];
+            document.getElementById(textId).value = originalValues[textId];
+        });
+
+        updateAppearancePreview();
+        feedback.textContent = "Original website colours restored in the preview.";
+    });
+
+    document.getElementById("resetAppearance").addEventListener("click", function () {
+        settingIds.forEach(id => {
+            document.getElementById(id).value = originalValues[id];
+        });
+
+        colorPairs.forEach(([colorId, textId]) => {
+            document.getElementById(colorId).value = originalValues[colorId];
+            document.getElementById(textId).value = originalValues[textId];
+        });
+
+        updateAppearancePreview();
+        feedback.textContent = "Original appearance settings restored in the preview.";
+    });
+
+    document.getElementById("reviewAppearance").addEventListener("click", function () {
+        const invalidColor = colorPairs.some(([colorId, textId]) =>
+            !validHex(document.getElementById(textId).value) ||
+            !validHex(document.getElementById(colorId).value)
+        );
+
+        if (invalidColor) {
+            feedback.textContent = "Please enter valid six-digit hexadecimal colour values.";
+            return;
+        }
+
+        updateAppearancePreview();
+        feedback.textContent = "Your appearance selections have been applied to the preview.";
+    });
+
+    updateAppearancePreview();
+</script>
+
+</body>
+</html>

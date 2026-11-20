@@ -1,0 +1,304 @@
+:root {
+    --navbar-height: 94px;
+    --navbar-gutter: 64px;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--navbar-height);
+    background: var(--white, #fff);
+    border-bottom: 1px solid #f0f2f1;
+}
+
+.nav-container {
+    position: relative;
+    width: min(1180px, calc(100% - var(--navbar-gutter)));
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    flex: 0 0 auto;
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header .brand-mark {
+    width: 47px;
+    height: 47px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white, #fff);
+    background: var(--green, #19c99b);
+    border-radius: 5px 17px 5px 17px;
+    font-family: Arial, sans-serif;
+    font-size: 29px;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.site-header .brand-name {
+    color: var(--text, #111);
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.main-nav {
+    height: 100%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 1.5vw, 24px);
+}
+
+.main-nav > a,
+.nav-actions > a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.18s ease;
+}
+
+.main-nav > a {
+    height: 100%;
+}
+
+.main-nav > a::after,
+.nav-actions .login-link::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    height: 2px;
+    background: var(--green, #19c99b);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.18s ease;
+}
+
+.main-nav > a.active,
+.nav-actions .login-link.active {
+    color: var(--green-dark, #0eae83);
+    font-weight: 400;
+}
+
+.main-nav > a.active::after,
+.nav-actions .login-link.active::after {
+    transform: scaleX(1);
+}
+
+.main-nav > a:hover,
+.nav-actions .login-link:hover,
+.main-nav > a:focus-visible,
+.nav-actions .login-link:focus-visible {
+    color: var(--green-dark, #0eae83);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    white-space: nowrap;
+}
+
+.nav-actions .nav-button {
+    min-height: 44px;
+    padding: 0 20px;
+    color: var(--white, #fff);
+    background: var(--green, #19c99b);
+    border: 0;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background-color 0.18s ease;
+}
+
+.nav-actions .nav-button:hover,
+.nav-actions .nav-button:focus-visible,
+.nav-actions .nav-button.active {
+    background: var(--green-dark, #0eae83);
+}
+
+.nav-actions .nav-button::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: -5px;
+    left: 20px;
+    height: 2px;
+    background: var(--green-dark, #0eae83);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.18s ease;
+}
+
+.nav-actions .nav-button.active::after {
+    transform: scaleX(1);
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    flex: 0 0 auto;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    background: var(--navy, #102a43);
+    border-radius: 5px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --navbar-height: 76px;
+        --navbar-gutter: 32px;
+    }
+
+    .nav-container {
+        gap: 12px;
+    }
+
+    .site-header .brand-mark {
+        width: 42px;
+        height: 42px;
+        font-size: 26px;
+    }
+
+    .site-header .brand-name {
+        font-size: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:first-child {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle[aria-expanded="true"] span:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        height: auto;
+        max-height: 0;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: var(--white, #fff);
+        border-bottom: 1px solid var(--border, #e5eeea);
+        box-shadow: 0 12px 20px rgba(16, 42, 67, 0.08);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        visibility: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.2s ease,
+            transform 0.2s ease, visibility 0s linear 0.3s;
+    }
+
+    .main-nav.open {
+        max-height: calc(100vh - var(--navbar-height));
+        padding: 12px 20px 20px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+        visibility: visible;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.2s ease,
+            transform 0.2s ease;
+    }
+
+    @supports (height: 100dvh) {
+        .main-nav.open {
+            max-height: calc(100dvh - var(--navbar-height));
+        }
+    }
+
+    .main-nav > a {
+        min-height: 44px;
+        height: 44px;
+        justify-content: flex-start;
+    }
+
+    .main-nav > a::after {
+        right: auto;
+        bottom: 3px;
+        width: 36px;
+    }
+
+    .nav-actions {
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 10px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        border-top: 1px solid var(--border, #e5eeea);
+    }
+
+    .nav-actions .login-link {
+        min-height: 44px;
+        justify-content: flex-start;
+        padding: 0 12px;
+    }
+
+    .nav-actions .login-link::after {
+        right: auto;
+        bottom: 3px;
+        left: 12px;
+        width: 36px;
+    }
+
+    .nav-actions .nav-button {
+        min-height: 44px;
+        width: 100%;
+        justify-content: center;
+        padding: 0 12px;
+    }
+}

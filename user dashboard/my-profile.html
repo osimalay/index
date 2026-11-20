@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your METRO LOAN customer profile and account information.">
+    <title>My Profile | METRO LOAN</title>
+
+    <link rel="stylesheet" href="../css/my-profile.css">
+    <script src="../js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <a href="overview.html" class="sidebar-brand">
+            <span class="brand-mark">M</span>
+            <span class="brand-name">METRO LOAN</span>
+        </a>
+
+        <div class="sidebar-label">MAIN MENU</div>
+
+        <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+            <a href="overview.html" class="sidebar-link">
+                <span class="nav-icon">⌂</span>
+                <span>Overview</span>
+            </a>
+
+            <a href="apply-for-loan.html" class="sidebar-link">
+                <span class="nav-icon">＋</span>
+                <span>Apply for a Loan</span>
+            </a>
+
+            <a href="my-loans.html" class="sidebar-link">
+                <span class="nav-icon">▤</span>
+                <span>My Loans</span>
+            </a>
+
+            <a href="repayment-schedule.html" class="sidebar-link">
+                <span class="nav-icon">▦</span>
+                <span>Repayment Schedule</span>
+            </a>
+
+            <a href="transaction-history.html" class="sidebar-link">
+                <span class="nav-icon">↔</span>
+                <span>Transaction History</span>
+            </a>
+
+            <div class="sidebar-label account-label">ACCOUNT</div>
+
+            <a href="my-profile.html" class="sidebar-link active">
+                <span class="nav-icon">♙</span>
+                <span>My Profile</span>
+            </a>
+
+            <a href="notifications.html" class="sidebar-link">
+                <span class="nav-icon">♧</span>
+                <span>Notifications</span>
+                <span class="notification-count">2</span>
+            </a>
+
+            <a href="help-support.html" class="sidebar-link">
+                <span class="nav-icon">?</span>
+                <span>Help &amp; Support</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-help">
+                <div class="help-icon">?</div>
+
+                <div>
+                    <strong>Need assistance?</strong>
+                    <p>We're here to help.</p>
+                    <a href="help-support.html">Get support →</a>
+                </div>
+            </div>
+
+            <a href="../login.html" class="logout-link">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP HEADER -->
+        <header class="top-header">
+
+            <div class="header-left">
+
+                <button class="sidebar-toggle" id="sidebarToggle"
+                        type="button"
+                        aria-label="Open navigation"
+                        aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div>
+                    <p class="header-greeting">USER ACCOUNT</p>
+                    <h1>My Profile</h1>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+
+                <a href="notifications.html"
+                   class="header-notification"
+                   aria-label="Notifications">
+                    <span>♧</span>
+                    <i></i>
+                </a>
+
+                <div class="header-divider"></div>
+
+                <a href="my-profile.html" class="profile-summary">
+                    <div class="profile-avatar">U</div>
+
+                    <div class="profile-details">
+                        <strong>My Account</strong>
+                        <span>Personal dashboard</span>
+                    </div>
+
+                    <span class="profile-arrow">⌄</span>
+                </a>
+
+            </div>
+
+        </header>
+
+        <!-- PAGE BODY -->
+        <div class="dashboard-content">
+
+            <!-- PAGE INTRO -->
+            <section class="welcome-section">
+                <div>
+                    <p class="welcome-label">ACCOUNT SETTINGS</p>
+                    <h2>My Profile</h2>
+                    <p>Manage your personal information and account details.</p>
+                </div>
+
+                <div class="account-status-badge">
+                    <span></span>
+                    Account Active
+                </div>
+            </section>
+
+            <!-- PROFILE OVERVIEW -->
+            <section class="profile-banner">
+
+                <div class="profile-banner-left">
+
+                    <div class="large-avatar">U</div>
+
+                    <div class="profile-banner-details">
+                        <span class="profile-caption">CUSTOMER PROFILE</span>
+                        <h3>Your Name</h3>
+                        <p>customer@email.com</p>
+                        <span class="customer-tag">METRO LOAN CUSTOMER</span>
+                    </div>
+
+                </div>
+
+                <div class="profile-progress">
+
+                    <div class="progress-heading">
+                        <span>Profile completion</span>
+                        <strong>80%</strong>
+                    </div>
+
+                    <div class="progress-track">
+                        <div class="progress-value"></div>
+                    </div>
+
+                    <p>Keep your account information up to date.</p>
+
+                </div>
+
+            </section>
+
+            <!-- PERSONAL INFORMATION -->
+            <section class="dashboard-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h3>Personal Information</h3>
+                        <p>Your basic personal details.</p>
+                    </div>
+
+                    <div class="panel-icon">♙</div>
+                </div>
+
+                <form class="profile-form">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName"
+                                   name="firstName"
+                                   placeholder="Enter your first name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName"
+                                   name="lastName"
+                                   placeholder="Enter your last name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email"
+                                   name="email"
+                                   placeholder="Enter your email address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone"
+                                   name="phone"
+                                   placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth</label>
+                            <input type="date" id="dateOfBirth"
+                                   name="dateOfBirth">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender">
+                                <option value="">Select gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="secondary-button">
+                            Cancel
+                        </button>
+
+                        <button type="button" class="primary-button">
+                            Save Changes
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- ADDRESS INFORMATION -->
+            <section class="dashboard-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h3>Address Information</h3>
+                        <p>Your current residential address.</p>
+                    </div>
+
+                    <div class="panel-icon">⌖</div>
+                </div>
+
+                <form class="profile-form">
+
+                    <div class="form-grid">
+
+                        <div class="form-group full-width">
+                            <label for="address">Residential Address</label>
+                            <input type="text" id="address"
+                                   name="address"
+                                   placeholder="Enter your residential address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city"
+                                   name="city"
+                                   placeholder="Enter your city">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state"
+                                   name="state"
+                                   placeholder="Enter your state">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country"
+                                   name="country" value="Nigeria">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postalCode">Postal Code</label>
+                            <input type="text" id="postalCode"
+                                   name="postalCode"
+                                   placeholder="Enter postal code">
+                        </div>
+
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="secondary-button">
+                            Cancel
+                        </button>
+
+                        <button type="button" class="primary-button">
+                            Save Address
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+
+            <!-- ACCOUNT SECURITY -->
+            <section class="dashboard-panel">
+
+                <div class="panel-heading">
+                    <div>
+                        <h3>Account Security</h3>
+                        <p>Manage your password and account protection.</p>
+                    </div>
+
+                    <div class="panel-icon">⌑</div>
+                </div>
+
+                <div class="security-row">
+
+                    <div class="security-icon">●</div>
+
+                    <div class="security-information">
+                        <strong>Password</strong>
+                        <p>Keep your password secure and updated.</p>
+                    </div>
+
+                    <a href="../login.html" class="security-link">
+                        Change Password →
+                    </a>
+
+                </div>
+
+                <div class="security-row">
+
+                    <div class="security-icon">✓</div>
+
+                    <div class="security-information">
+                        <strong>Account Protection</strong>
+                        <p>Always keep your account information private.</p>
+                    </div>
+
+                    <span class="protected-label">Protected</span>
+
+                </div>
+
+            </section>
+
+            <!-- ACCOUNT INFORMATION -->
+            <section class="account-information">
+
+                <div>
+                    <p class="welcome-label">ACCOUNT INFORMATION</p>
+                    <h3>Your METRO LOAN Account</h3>
+                    <p>
+                        Keep your registered information accurate
+                        to help us serve you better.
+                    </p>
+                </div>
+
+                <div class="account-reference">
+                    <span>ACCOUNT STATUS</span>
+                    <strong><i></i> Active</strong>
+                </div>
+
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="dashboard-footer">
+                <p>© <span id="current-year">2026</span> METRO LOAN. All rights reserved.</p>
+                <p>Making financial access simpler.</p>
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

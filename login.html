@@ -10,10 +10,12 @@
     <title>Login | METRO LOAN</title>
 
     <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/site-footer.css">
+    <link rel="stylesheet" href="css/public-shared.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="js/main.js" defer></script>
     <script src="js/site-chrome.js" defer></script>
+    <script src="js/auth.js" defer></script>
 </head>
 
 <body>
@@ -48,12 +50,11 @@
                 <a href="calculator.html">Calculator</a>
                 <a href="faq.html">FAQ</a>
                 <a href="contact.html">Contact</a>
+                <div class="nav-actions">
+                    <a href="login.html" class="login-link">Login</a>
+                    <a href="register.html" class="nav-button">Get Started</a>
+                </div>
             </nav>
-
-            <div class="nav-actions">
-                <a href="login.html" class="login-link">Login</a>
-                <a href="register.html" class="nav-button">Get Started</a>
-            </div>
 
         </div>
     </header>
@@ -80,7 +81,7 @@
 
 
             <!-- LOGIN FORM -->
-            <form>
+            <form id="login-form">
 
                 <label for="login-email">
                     Email Address
@@ -90,6 +91,7 @@
                     type="email"
                     id="login-email"
                     placeholder="Enter your email address"
+                    autocomplete="email"
                     required
                 >
 
@@ -102,6 +104,7 @@
                     type="password"
                     id="login-password"
                     placeholder="Enter your password"
+                    autocomplete="current-password"
                     required
                 >
 
@@ -109,7 +112,7 @@
                 <div class="form-options">
 
                     <label class="remember">
-                        <input type="checkbox">
+                        <input type="checkbox" id="remember-me">
                         Remember me
                     </label>
 
@@ -117,11 +120,11 @@
 
                 </div>
 
+                <p class="auth-message" id="auth-message" role="alert" aria-live="polite" hidden></p>
 
                 <button
-                    type="button"
-                    class="primary-button"
-                    >
+                    type="submit"
+                    class="primary-button">
 
                     Login
 
@@ -136,8 +139,7 @@
 
 
             <p class="auth-note">
-                This is a frontend demonstration.
-                Account login is not connected yet.
+                Frontend-only demo: account data stays in this browser and is not secured by a server.
             </p>
 
         </div>

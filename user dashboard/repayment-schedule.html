@@ -1,0 +1,373 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your METRO LOAN repayment schedule and upcoming payments.">
+    <title>Repayment Schedule | METRO LOAN</title>
+
+    <link rel="stylesheet" href="/css/repayment-schedule.css">
+    <script src="../js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="overview.html" class="sidebar-brand">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+            <div class="sidebar-label">MAIN MENU</div>
+
+            <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+                <a href="overview.html" class="sidebar-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="apply-for-loan.html" class="sidebar-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Apply for a Loan</span>
+                </a>
+
+                <a href="my-loans.html" class="sidebar-link">
+                    <span class="nav-icon">▤</span>
+                    <span>My Loans</span>
+                </a>
+
+                <a href="repayment-schedule.html" class="sidebar-link active">
+                    <span class="nav-icon">▦</span>
+                    <span>Repayment Schedule</span>
+                </a>
+
+                <a href="transaction-history.html" class="sidebar-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transaction History</span>
+                </a>
+
+                <div class="sidebar-label account-label">ACCOUNT</div>
+
+                <a href="my-profile.html" class="sidebar-link">
+                    <span class="nav-icon">♙</span>
+                    <span>My Profile</span>
+                </a>
+
+                <a href="notifications.html" class="sidebar-link">
+                    <span class="nav-icon">♧</span>
+                    <span>Notifications</span>
+                    <span class="notification-count">2</span>
+                </a>
+
+                <a href="help-support.html" class="sidebar-link">
+                    <span class="nav-icon">?</span>
+                    <span>Help &amp; Support</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help">
+                    <div class="help-icon">?</div>
+                    <div>
+                        <strong>Need assistance?</strong>
+                        <p>We're here to help.</p>
+                        <a href="help-support.html">Get support →</a>
+                    </div>
+                </div>
+
+                <a href="../login.html" class="logout-link">
+                    <span class="nav-icon">↪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <button class="sidebar-toggle" id="sidebarToggle"
+                            type="button"
+                            aria-label="Open navigation"
+                            aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div>
+                        <p class="header-greeting">USER ACCOUNT</p>
+                        <h1>Repayment Schedule</h1>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a href="notifications.html"
+                       class="header-notification"
+                       aria-label="Notifications">
+                        <span>♧</span>
+                        <i></i>
+                    </a>
+
+                    <div class="header-divider"></div>
+
+                    <a href="my-profile.html" class="profile-summary">
+                        <div class="profile-avatar">U</div>
+                        <div class="profile-details">
+                            <strong>My Account</strong>
+                            <span>Personal dashboard</span>
+                        </div>
+                        <span class="profile-arrow">⌄</span>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE CONTENT -->
+            <div class="dashboard-content">
+
+                <!-- PAGE INTRODUCTION -->
+                <section class="welcome-section">
+
+                    <div>
+                        <p class="welcome-label">PAYMENT MANAGEMENT</p>
+                        <h2>Repayment Schedule</h2>
+                        <p>
+                            Keep track of your loan repayments, upcoming
+                            due dates and payment progress.
+                        </p>
+                    </div>
+
+                    <a href="my-loans.html" class="welcome-button">
+                        <span>↗</span> View My Loans
+                    </a>
+
+                </section>
+
+                <!-- REPAYMENT SUMMARY -->
+                <section class="summary-grid">
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon balance-icon">₦</div>
+                            <span class="summary-status">BALANCE</span>
+                        </div>
+                        <p class="summary-title">Outstanding Balance</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Your remaining loan balance</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon payment-icon">₦</div>
+                            <span class="summary-status">PAID</span>
+                        </div>
+                        <p class="summary-title">Total Repaid</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Total payments completed</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon loan-icon">▦</div>
+                            <span class="summary-status">SCHEDULE</span>
+                        </div>
+                        <p class="summary-title">Scheduled Payments</p>
+                        <h3>0</h3>
+                        <p class="summary-description">Payments currently scheduled</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon due-icon">◷</div>
+                            <span class="summary-status">NEXT DUE</span>
+                        </div>
+                        <p class="summary-title">Next Payment</p>
+                        <h3 class="no-payment">No payment due</h3>
+                        <p class="summary-description">Your next repayment date</p>
+                    </article>
+
+                </section>
+
+                <!-- REPAYMENT PROGRESS -->
+                <section class="dashboard-panel progress-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Repayment Progress</h3>
+                            <p>Monitor how much of your loan has been repaid.</p>
+                        </div>
+                        <span class="progress-badge">0% completed</span>
+                    </div>
+
+                    <div class="progress-information">
+                        <div class="progress-labels">
+                            <span>Amount repaid</span>
+                            <strong>₦0.00</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div class="progress-fill"></div>
+                        </div>
+
+                        <div class="progress-bottom">
+                            <span>₦0.00 paid</span>
+                            <span>₦0.00 total loan amount</span>
+                        </div>
+                    </div>
+
+                    <div class="progress-note">
+                        <span class="note-icon">i</span>
+                        <p>
+                            Your repayment progress will update when a loan
+                            has been approved and payments have been recorded.
+                        </p>
+                    </div>
+
+                </section>
+
+                <!-- REPAYMENT TABLE -->
+                <section class="dashboard-panel schedule-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Payment Schedule</h3>
+                            <p>View your upcoming and completed repayments.</p>
+                        </div>
+                        <span class="schedule-count">0 Payments</span>
+                    </div>
+
+                    <div class="table-wrapper">
+
+                        <table class="repayment-table">
+                            <thead>
+                                <tr>
+                                    <th>Payment Reference</th>
+                                    <th>Due Date</th>
+                                    <th>Amount Due</th>
+                                    <th>Amount Paid</th>
+                                    <th>Payment Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Repayment records will appear here -->
+                            </tbody>
+                        </table>
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▦</div>
+                            <h4>No repayment schedule available</h4>
+                            <p>
+                                You don't have any scheduled repayments yet.
+                                Once your loan is approved, your payment
+                                dates and amounts will appear here.
+                            </p>
+                            <a href="apply-for-loan.html" class="small-primary-button">
+                                Apply for a Loan
+                            </a>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- PAYMENT INFORMATION -->
+                <section class="dashboard-panel payment-information">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Repayment Information</h3>
+                            <p>Important things to know about your payments.</p>
+                        </div>
+                    </div>
+
+                    <div class="information-grid">
+
+                        <article class="information-item">
+                            <div class="information-icon">◷</div>
+                            <div>
+                                <h4>Payment Due Dates</h4>
+                                <p>
+                                    Check your schedule regularly so you know
+                                    when each repayment is due.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon">₦</div>
+                            <div>
+                                <h4>Payment Amounts</h4>
+                                <p>
+                                    Review the amount due for each repayment
+                                    before making a payment.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon">✓</div>
+                            <div>
+                                <h4>Payment Records</h4>
+                                <p>
+                                    Your recorded repayments will be reflected
+                                    in your transaction history.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon">?</div>
+                            <div>
+                                <h4>Need Help?</h4>
+                                <p>
+                                    Contact our support team if you have
+                                    questions about your repayment.
+                                </p>
+                                <a href="help-support.html">Contact support →</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+                    <p>
+                        © <span id="current-year">2026</span>
+                        METRO LOAN. All rights reserved.
+                    </p>
+                    <p>Manage your finances with clarity and confidence.</p>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MOBILE SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</body>
+</html>

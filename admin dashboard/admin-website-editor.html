@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Editor | METRO LOAN Command Desk</title>
+    <link rel="stylesheet" href="../css/admin-website-editor.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="website-editor"></aside>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Website Editor</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="editor-intro">
+                <div>
+                    <span class="section-eyebrow">WEBSITE CONTROL</span>
+                    <h2>Edit Your Website</h2>
+                    <p>Manage the text, images, buttons and sections displayed across your public website.</p>
+                </div>
+
+                <a href="../index.html" target="_blank" rel="noopener" class="view-site-button">
+                    View Website <span>↗</span>
+                </a>
+            </section>
+
+            <section class="editor-toolbar">
+                <div class="toolbar-heading">
+                    <span class="toolbar-icon">▤</span>
+                    <div>
+                        <h3>Choose a Website Page</h3>
+                        <p>Select the page whose content you want to manage.</p>
+                    </div>
+                </div>
+
+                <div class="page-selector">
+                    <label for="websitePage">Website page</label>
+                    <select id="websitePage" name="websitePage">
+                        <option value="home">Home Page</option>
+                        <option value="about">About Us</option>
+                        <option value="loans">Loans</option>
+                        <option value="how-it-works">How It Works</option>
+                        <option value="calculator">Loan Calculator</option>
+                        <option value="faq">Frequently Asked Questions</option>
+                        <option value="contact">Contact Us</option>
+                        <option value="login">Login</option>
+                        <option value="register">Register</option>
+                    </select>
+                </div>
+            </section>
+
+            <form class="website-editor-form" id="websiteEditorForm">
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Hero Section</h3>
+                            <p>Manage the main heading, introduction and call-to-action buttons.</p>
+                        </div>
+                        <span class="panel-number">01</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="heroEyebrow">Eyebrow Text</label>
+                            <input type="text" id="heroEyebrow" name="heroEyebrow" value="FINANCIAL FREEDOM, MADE SIMPLE">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="heroHeading">Main Heading</label>
+                            <textarea id="heroHeading" name="heroHeading" rows="2">ALL YOUR LOAN NEEDS IN ONE PLACE</textarea>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="heroDescription">Hero Description</label>
+                            <textarea id="heroDescription" name="heroDescription" rows="3" placeholder="Enter the homepage introduction"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroPrimaryButton">Primary Button Text</label>
+                            <input type="text" id="heroPrimaryButton" name="heroPrimaryButton" value="Explore Loan Options">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroPrimaryLink">Primary Button Link</label>
+                            <input type="text" id="heroPrimaryLink" name="heroPrimaryLink" value="loans.html">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroSecondaryButton">Secondary Button Text</label>
+                            <input type="text" id="heroSecondaryButton" name="heroSecondaryButton" value="Learn how it works">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="heroSecondaryLink">Secondary Button Link</label>
+                            <input type="text" id="heroSecondaryLink" name="heroSecondaryLink" value="how-it-works.html">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Hero Image</h3>
+                            <p>Manage the image used in the homepage hero area.</p>
+                        </div>
+                        <span class="panel-number">02</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="heroImage">Image File Path</label>
+                            <input type="text" id="heroImage" name="heroImage" value="images/metro-loan-hero-reference.png">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="heroImageAlt">Image Alternative Text</label>
+                            <input type="text" id="heroImageAlt" name="heroImageAlt" value="A customer using a smartphone">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Trust Section</h3>
+                            <p>Manage the trust message displayed below the hero section.</p>
+                        </div>
+                        <span class="panel-number">03</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="trustHeading">Section Heading</label>
+                            <input type="text" id="trustHeading" name="trustHeading" placeholder="Enter trust section heading">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="trustSubtitle">Section Subtitle</label>
+                            <input type="text" id="trustSubtitle" name="trustSubtitle" placeholder="Enter supporting text">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Loan Services Section</h3>
+                            <p>Manage the heading and introduction for the loan services displayed on the homepage.</p>
+                        </div>
+                        <span class="panel-number">04</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="servicesHeading">Section Heading</label>
+                            <input type="text" id="servicesHeading" name="servicesHeading" placeholder="Enter section heading">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servicesSubtitle">Section Subtitle</label>
+                            <input type="text" id="servicesSubtitle" name="servicesSubtitle" placeholder="Enter supporting text">
+                        </div>
+                    </div>
+
+                    <div class="content-items">
+                        <h4>Loan Service Items</h4>
+                        <div class="item-grid">
+                            <div class="form-group">
+                                <label for="servicePersonal">Personal Loans</label>
+                                <input type="text" id="servicePersonal" name="servicePersonal" value="Personal Loans">
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceBusiness">Business Loans</label>
+                                <input type="text" id="serviceBusiness" name="serviceBusiness" value="Business Loans">
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceEmergency">Emergency Loans</label>
+                                <input type="text" id="serviceEmergency" name="serviceEmergency" value="Emergency Loans">
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceEducation">Education Loans</label>
+                                <input type="text" id="serviceEducation" name="serviceEducation" value="Education Loans">
+                            </div>
+                            <div class="form-group">
+                                <label for="serviceShortTerm">Short-Term Loans</label>
+                                <input type="text" id="serviceShortTerm" name="serviceShortTerm" value="Short-Term Loans">
+                            </div>
+                            <div class="form-group">
+                                <label for="servicePurchase">Purchase Loans</label>
+                                <input type="text" id="servicePurchase" name="servicePurchase" value="Purchase Loans">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Why Choose Us</h3>
+                            <p>Manage the heading and description of your benefits section.</p>
+                        </div>
+                        <span class="panel-number">05</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="whyHeading">Section Heading</label>
+                            <input type="text" id="whyHeading" name="whyHeading" placeholder="Enter section heading">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="whySubtitle">Section Subtitle</label>
+                            <input type="text" id="whySubtitle" name="whySubtitle" placeholder="Enter supporting text">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="whyDescription">Section Description</label>
+                            <textarea id="whyDescription" name="whyDescription" rows="3" placeholder="Enter section description"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>How It Works Section</h3>
+                            <p>Manage the process introduction displayed on the homepage.</p>
+                        </div>
+                        <span class="panel-number">06</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="processHeading">Section Heading</label>
+                            <input type="text" id="processHeading" name="processHeading" placeholder="Enter section heading">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="processSubtitle">Section Subtitle</label>
+                            <input type="text" id="processSubtitle" name="processSubtitle" placeholder="Enter supporting text">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>FAQ Preview</h3>
+                            <p>Manage the frequently asked questions introduction and page link.</p>
+                        </div>
+                        <span class="panel-number">07</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="faqHeading">Section Heading</label>
+                            <input type="text" id="faqHeading" name="faqHeading" placeholder="Enter FAQ heading">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="faqLink">FAQ Page Link</label>
+                            <input type="text" id="faqLink" name="faqLink" value="faq.html">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="faqSubtitle">Section Description</label>
+                            <textarea id="faqSubtitle" name="faqSubtitle" rows="3" placeholder="Enter FAQ introduction"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">HOMEPAGE CONTENT</span>
+                            <h3>Final Call to Action</h3>
+                            <p>Manage the final message and button displayed before the footer.</p>
+                        </div>
+                        <span class="panel-number">08</span>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="ctaHeading">Main Heading</label>
+                            <input type="text" id="ctaHeading" name="ctaHeading" placeholder="Enter call-to-action heading">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="ctaDescription">Description</label>
+                            <textarea id="ctaDescription" name="ctaDescription" rows="3" placeholder="Enter call-to-action description"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ctaButton">Button Text</label>
+                            <input type="text" id="ctaButton" name="ctaButton" placeholder="Enter button text">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ctaLink">Button Link</label>
+                            <input type="text" id="ctaLink" name="ctaLink" value="register.html">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="editor-panel section-order-panel">
+                    <div class="panel-heading">
+                        <div>
+                            <span class="section-eyebrow">PAGE STRUCTURE</span>
+                            <h3>Homepage Sections</h3>
+                            <p>Review the sections that make up the homepage.</p>
+                        </div>
+                        <span class="panel-number">09</span>
+                    </div>
+
+                    <div class="section-order-list">
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Hero Section</strong><span class="order-status">01</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Trust Strip</strong><span class="order-status">02</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Introduction</strong><span class="order-status">03</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Loan Services</strong><span class="order-status">04</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Why Choose Us</strong><span class="order-status">05</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>How It Works</strong><span class="order-status">06</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Eligibility</strong><span class="order-status">07</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Loan Calculator</strong><span class="order-status">08</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Responsible Borrowing</strong><span class="order-status">09</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>FAQ Preview</strong><span class="order-status">10</span></div>
+                        <div class="section-order-item"><span class="drag-handle">⠿</span><strong>Final Call to Action</strong><span class="order-status">11</span></div>
+                    </div>
+                </section>
+
+                <div class="editor-actions">
+                    <button type="reset" class="secondary-button">Discard Changes</button>
+                    <button type="submit" class="save-button">Save Changes <span>→</span></button>
+                </div>
+
+            </form>
+
+        </div>
+
+        <footer class="admin-footer">
+            <span>© 2026 METRO LOAN. All rights reserved.</span>
+            <span>Command Desk</span>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>

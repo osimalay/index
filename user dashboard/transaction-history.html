@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your METRO LOAN transaction and payment history.">
+    <title>Transaction History | METRO LOAN</title>
+
+    <link rel="stylesheet" href="../css/transaction-history.css">
+    <script src="/js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="overview.html" class="sidebar-brand">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+            <div class="sidebar-label">MAIN MENU</div>
+
+            <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+                <a href="overview.html" class="sidebar-link">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="apply-for-loan.html" class="sidebar-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Apply for a Loan</span>
+                </a>
+
+                <a href="my-loans.html" class="sidebar-link">
+                    <span class="nav-icon">▤</span>
+                    <span>My Loans</span>
+                </a>
+
+                <a href="repayment-schedule.html" class="sidebar-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Repayment Schedule</span>
+                </a>
+
+                <a href="transaction-history.html" class="sidebar-link active">
+                    <span class="nav-icon">↔</span>
+                    <span>Transaction History</span>
+                </a>
+
+                <div class="sidebar-label account-label">ACCOUNT</div>
+
+                <a href="my-profile.html" class="sidebar-link">
+                    <span class="nav-icon">♙</span>
+                    <span>My Profile</span>
+                </a>
+
+                <a href="notifications.html" class="sidebar-link">
+                    <span class="nav-icon">♧</span>
+                    <span>Notifications</span>
+                    <span class="notification-count">2</span>
+                </a>
+
+                <a href="help-support.html" class="sidebar-link">
+                    <span class="nav-icon">?</span>
+                    <span>Help &amp; Support</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="sidebar-help">
+                    <div class="help-icon">?</div>
+                    <div>
+                        <strong>Need assistance?</strong>
+                        <p>We're here to help.</p>
+                        <a href="help-support.html">Get support →</a>
+                    </div>
+                </div>
+
+                <a href="../login.html" class="logout-link">
+                    <span class="nav-icon">↪</span>
+                    <span>Logout</span>
+                </a>
+
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="top-header">
+
+                <div class="header-left">
+
+                    <button class="sidebar-toggle"
+                            id="sidebarToggle"
+                            type="button"
+                            aria-label="Open navigation"
+                            aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div>
+                        <p class="header-greeting">USER ACCOUNT</p>
+                        <h1>Transaction History</h1>
+                    </div>
+
+                </div>
+
+                <div class="header-right">
+
+                    <a href="notifications.html"
+                       class="header-notification"
+                       aria-label="Notifications">
+                        <span>♧</span>
+                        <i></i>
+                    </a>
+
+                    <div class="header-divider"></div>
+
+                    <a href="my-profile.html" class="profile-summary">
+                        <div class="profile-avatar">U</div>
+
+                        <div class="profile-details">
+                            <strong>My Account</strong>
+                            <span>Personal dashboard</span>
+                        </div>
+
+                        <span class="profile-arrow">⌄</span>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE CONTENT -->
+            <div class="dashboard-content">
+
+                <!-- PAGE INTRODUCTION -->
+                <section class="welcome-section">
+
+                    <div>
+                        <p class="welcome-label">ACCOUNT ACTIVITY</p>
+                        <h2>Your Transaction History</h2>
+                        <p>
+                            Review your loan disbursements, repayments
+                            and other account transactions in one place.
+                        </p>
+                    </div>
+
+                    <a href="repayment-schedule.html" class="welcome-button">
+                        <span>↗</span> View Repayment Schedule
+                    </a>
+
+                </section>
+
+                <!-- TRANSACTION SUMMARY -->
+                <section class="summary-grid">
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon balance-icon">₦</div>
+                            <span class="summary-status">TOTAL</span>
+                        </div>
+                        <p class="summary-title">Total Transactions</p>
+                        <h3>0</h3>
+                        <p class="summary-description">All recorded transactions</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon payment-icon">↓</div>
+                            <span class="summary-status">RECEIVED</span>
+                        </div>
+                        <p class="summary-title">Loan Disbursements</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Total loan funds received</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon loan-icon">↑</div>
+                            <span class="summary-status">PAID</span>
+                        </div>
+                        <p class="summary-title">Total Repayments</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Total repayments made</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon due-icon">◷</div>
+                            <span class="summary-status">RECENT</span>
+                        </div>
+                        <p class="summary-title">Latest Transaction</p>
+                        <h3 class="no-transaction">No activity</h3>
+                        <p class="summary-description">Your most recent account activity</p>
+                    </article>
+
+                </section>
+
+                <!-- TRANSACTION HISTORY TABLE -->
+                <section class="dashboard-panel transactions-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>All Transactions</h3>
+                            <p>Track your financial activities and payment records.</p>
+                        </div>
+
+                        <span class="transaction-count">0 Transactions</span>
+                    </div>
+
+                    <!-- FILTERS -->
+                    <div class="transaction-filters">
+
+                        <div class="filter-search">
+                            <span>⌕</span>
+                            <input
+                                type="search"
+                                placeholder="Search transaction reference..."
+                                aria-label="Search transaction reference">
+                        </div>
+
+                        <select aria-label="Filter by transaction type">
+                            <option value="">All Transaction Types</option>
+                            <option value="disbursement">Loan Disbursement</option>
+                            <option value="repayment">Loan Repayment</option>
+                            <option value="other">Other Transactions</option>
+                        </select>
+
+                        <select aria-label="Filter by transaction status">
+                            <option value="">All Statuses</option>
+                            <option value="successful">Successful</option>
+                            <option value="pending">Pending</option>
+                            <option value="failed">Failed</option>
+                        </select>
+
+                    </div>
+
+                    <!-- TABLE -->
+                    <div class="table-wrapper">
+
+                        <table class="transactions-table">
+                            <thead>
+                                <tr>
+                                    <th>Transaction Reference</th>
+                                    <th>Transaction Type</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Transaction records will appear here -->
+                            </tbody>
+                        </table>
+
+                        <div class="empty-state">
+
+                            <div class="empty-icon">↔</div>
+
+                            <h4>No transactions yet</h4>
+
+                            <p>
+                                Your transaction history is currently empty.
+                                Once you receive a loan or make a repayment,
+                                your transaction records will appear here.
+                            </p>
+
+                            <a href="apply-for-loan.html"
+                               class="small-primary-button">
+                                Apply for a Loan
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- TRANSACTION INFORMATION -->
+                <section class="dashboard-panel information-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Understanding Your Transactions</h3>
+                            <p>Learn what each transaction status means.</p>
+                        </div>
+                    </div>
+
+                    <div class="information-grid">
+
+                        <article class="information-item">
+                            <div class="information-icon successful-icon">✓</div>
+                            <div>
+                                <h4>Successful</h4>
+                                <p>
+                                    The transaction has been completed
+                                    and recorded successfully.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon pending-icon">◷</div>
+                            <div>
+                                <h4>Pending</h4>
+                                <p>
+                                    The transaction is still being processed
+                                    or awaiting confirmation.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon failed-icon">!</div>
+                            <div>
+                                <h4>Failed</h4>
+                                <p>
+                                    The transaction was not completed.
+                                    Contact support if you need assistance.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="information-item">
+                            <div class="information-icon support-icon">?</div>
+                            <div>
+                                <h4>Transaction Support</h4>
+                                <p>
+                                    If you notice an issue with a transaction,
+                                    our support team can assist you.
+                                </p>
+                                <a href="help-support.html">Get assistance →</a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+
+                    <p>
+                        © <span id="current-year">2026</span>
+                        METRO LOAN. All rights reserved.
+                    </p>
+
+                    <p>Manage your finances with clarity and confidence.</p>
+
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MOBILE SIDEBAR OVERLAY -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</body>
+</html>

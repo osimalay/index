@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="METRO LOAN Command Desk - Navigation and Footer Management">
+    <title>Navigation &amp; Footer | METRO LOAN Command Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin-navigation.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="navigation"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Navigation &amp; Footer</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="page-intro">
+                <div>
+                    <span class="section-kicker">WEBSITE STRUCTURE</span>
+                    <h2>Navigation &amp; Footer Management</h2>
+                    <p>Manage the website menu, navigation links, footer sections and social media destinations.</p>
+                </div>
+            </section>
+
+            <!-- MAIN NAVIGATION -->
+            <section class="content-panel">
+                <div class="panel-heading panel-heading-flex">
+                    <div>
+                        <h3>Main Website Navigation</h3>
+                        <p>Manage the links displayed in the main website navigation.</p>
+                    </div>
+                    <button type="button" class="primary-button" id="addNavItem">＋ Add Menu Item</button>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="management-table">
+                        <thead>
+                            <tr>
+                                <th>MENU LABEL</th>
+                                <th>PAGE / LINK</th>
+                                <th>VISIBILITY</th>
+                                <th>ORDER</th>
+                                <th>ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="navigationRows">
+                            <tr>
+                                <td><input class="table-input nav-label" value="Home" aria-label="Home menu label"></td>
+                                <td><input class="table-input nav-url" value="index.html" aria-label="Home page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Home link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Home up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Home down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Home link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="About" aria-label="About menu label"></td>
+                                <td><input class="table-input nav-url" value="about.html" aria-label="About page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show About link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move About up">↑</button><button type="button" class="icon-button move-down" aria-label="Move About down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove About link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="Loans" aria-label="Loans menu label"></td>
+                                <td><input class="table-input nav-url" value="loans.html" aria-label="Loans page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Loans link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Loans up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Loans down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Loans link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="How It Works" aria-label="How It Works menu label"></td>
+                                <td><input class="table-input nav-url" value="how-it-works.html" aria-label="How It Works page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show How It Works link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move How It Works up">↑</button><button type="button" class="icon-button move-down" aria-label="Move How It Works down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove How It Works link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="Calculator" aria-label="Calculator menu label"></td>
+                                <td><input class="table-input nav-url" value="calculator.html" aria-label="Calculator page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Calculator link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Calculator up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Calculator down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Calculator link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="FAQ" aria-label="FAQ menu label"></td>
+                                <td><input class="table-input nav-url" value="faq.html" aria-label="FAQ page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show FAQ link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move FAQ up">↑</button><button type="button" class="icon-button move-down" aria-label="Move FAQ down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove FAQ link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="Contact" aria-label="Contact menu label"></td>
+                                <td><input class="table-input nav-url" value="contact.html" aria-label="Contact page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Contact link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Contact up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Contact down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Contact link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="Login" aria-label="Login menu label"></td>
+                                <td><input class="table-input nav-url" value="login.html" aria-label="Login page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Login link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Login up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Login down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Login link">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td><input class="table-input nav-label" value="Get Started" aria-label="Get Started menu label"></td>
+                                <td><input class="table-input nav-url" value="register.html" aria-label="Get Started page link"></td>
+                                <td><label class="switch"><input type="checkbox" checked aria-label="Show Get Started link"><span></span></label></td>
+                                <td class="order-actions"><button type="button" class="icon-button move-up" aria-label="Move Get Started up">↑</button><button type="button" class="icon-button move-down" aria-label="Move Get Started down">↓</button></td>
+                                <td><button type="button" class="remove-button" aria-label="Remove Get Started link">Remove</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel-actions">
+                    <button type="button" class="secondary-button" id="resetNavigation">Reset Menu</button>
+                    <button type="button" class="primary-button" id="reviewNavigation">Review Menu</button>
+                </div>
+                <p class="inline-feedback" id="navigationFeedback" aria-live="polite"></p>
+            </section>
+
+            <!-- FOOTER CONTENT -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Footer Content</h3>
+                    <p>Manage the information displayed at the bottom of your public website pages.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field full-width">
+                        <label for="footerDescription">Footer Description</label>
+                        <textarea id="footerDescription" rows="3" placeholder="Enter the short description displayed in your website footer."></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="footerPhone">Contact Phone</label>
+                        <input type="tel" id="footerPhone" placeholder="Enter contact phone number">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="footerEmail">Contact Email</label>
+                        <input type="email" id="footerEmail" placeholder="Enter contact email address">
+                    </div>
+
+                    <div class="form-field full-width">
+                        <label for="footerAddress">Business Address</label>
+                        <textarea id="footerAddress" rows="2" placeholder="Enter business address"></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="copyrightText">Copyright Text</label>
+                        <input type="text" id="copyrightText" value="© 2026 METRO LOAN. All rights reserved.">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="footerTagline">Footer Tagline</label>
+                        <input type="text" id="footerTagline" placeholder="Enter footer tagline">
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER LINKS -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Footer Quick Links</h3>
+                    <p>Manage the links visitors can access from the website footer.</p>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="footerAboutLink">About Link</label>
+                        <input type="text" id="footerAboutLink" value="about.html">
+                    </div>
+                    <div class="form-field">
+                        <label for="footerLoansLink">Loans Link</label>
+                        <input type="text" id="footerLoansLink" value="loans.html">
+                    </div>
+                    <div class="form-field">
+                        <label for="footerFaqLink">FAQ Link</label>
+                        <input type="text" id="footerFaqLink" value="faq.html">
+                    </div>
+                    <div class="form-field">
+                        <label for="footerContactLink">Contact Link</label>
+                        <input type="text" id="footerContactLink" value="contact.html">
+                    </div>
+                    <div class="form-field">
+                        <label for="footerPrivacyLink">Privacy Policy Link</label>
+                        <input type="text" id="footerPrivacyLink" placeholder="Enter page link">
+                    </div>
+                    <div class="form-field">
+                        <label for="footerTermsLink">Terms &amp; Conditions Link</label>
+                        <input type="text" id="footerTermsLink" placeholder="Enter page link">
+                    </div>
+                </div>
+            </section>
+
+            <!-- SOCIAL LINKS -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Social Media Links</h3>
+                    <p>Set the destinations for the social media icons displayed on your website.</p>
+                </div>
+
+                <div class="social-links-grid">
+                    <div class="social-field">
+                        <span class="social-mark instagram">IG</span>
+                        <div class="form-field">
+                            <label for="instagramLink">Instagram</label>
+                            <input type="url" id="instagramLink" placeholder="https://instagram.com/">
+                        </div>
+                    </div>
+
+                    <div class="social-field">
+                        <span class="social-mark whatsapp">WA</span>
+                        <div class="form-field">
+                            <label for="whatsappLink">WhatsApp</label>
+                            <input type="url" id="whatsappLink" placeholder="https://wa.me/">
+                        </div>
+                    </div>
+
+                    <div class="social-field">
+                        <span class="social-mark twitter">X</span>
+                        <div class="form-field">
+                            <label for="twitterLink">Twitter / X</label>
+                            <input type="url" id="twitterLink" placeholder="https://x.com/">
+                        </div>
+                    </div>
+
+                    <div class="social-field">
+                        <span class="social-mark tiktok">TT</span>
+                        <div class="form-field">
+                            <label for="tiktokLink">TikTok</label>
+                            <input type="url" id="tiktokLink" placeholder="https://tiktok.com/">
+                        </div>
+                    </div>
+
+                    <div class="social-field">
+                        <span class="social-mark linkedin">in</span>
+                        <div class="form-field">
+                            <label for="linkedinLink">LinkedIn</label>
+                            <input type="url" id="linkedinLink" placeholder="https://linkedin.com/">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FOOTER DISPLAY OPTIONS -->
+            <section class="content-panel">
+                <div class="panel-heading">
+                    <h3>Footer Display Options</h3>
+                    <p>Choose which footer elements should be displayed.</p>
+                </div>
+
+                <div class="display-options">
+                    <label class="option-row">
+                        <span>
+                            <strong>Show social media icons</strong>
+                            <small>Display social media links in the website footer.</small>
+                        </span>
+                        <span class="switch"><input type="checkbox" id="showSocial" checked><span></span></span>
+                    </label>
+
+                    <label class="option-row">
+                        <span>
+                            <strong>Show contact information</strong>
+                            <small>Display the website contact details in the footer.</small>
+                        </span>
+                        <span class="switch"><input type="checkbox" id="showContact" checked><span></span></span>
+                    </label>
+
+                    <label class="option-row">
+                        <span>
+                            <strong>Show quick links</strong>
+                            <small>Display the footer navigation links.</small>
+                        </span>
+                        <span class="switch"><input type="checkbox" id="showFooterLinks" checked><span></span></span>
+                    </label>
+
+                    <label class="option-row">
+                        <span>
+                            <strong>Show copyright information</strong>
+                            <small>Display the copyright text at the bottom of the website.</small>
+                        </span>
+                        <span class="switch"><input type="checkbox" id="showCopyright" checked><span></span></span>
+                    </label>
+                </div>
+
+                <div class="panel-actions">
+                    <button type="button" class="secondary-button" id="resetFooter">Reset Footer Fields</button>
+                    <button type="button" class="primary-button" id="reviewFooter">Review Footer</button>
+                </div>
+                <p class="inline-feedback" id="footerFeedback" aria-live="polite"></p>
+            </section>
+
+            <footer class="admin-footer">
+                <span>© 2026 METRO LOAN. All rights reserved.</span>
+                <span>Command Desk</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    const navigationRows = document.getElementById("navigationRows");
+    const navigationFeedback = document.getElementById("navigationFeedback");
+    const footerFeedback = document.getElementById("footerFeedback");
+
+    const originalNavigation = navigationRows.innerHTML;
+
+    function createNavigationRow(label = "", url = "") {
+        const row = document.createElement("tr");
+
+        const labelCell = document.createElement("td");
+        const labelInput = document.createElement("input");
+        labelInput.className = "table-input nav-label";
+        labelInput.value = label;
+        labelInput.placeholder = "Menu label";
+        labelInput.setAttribute("aria-label", "Menu label");
+        labelCell.appendChild(labelInput);
+
+        const urlCell = document.createElement("td");
+        const urlInput = document.createElement("input");
+        urlInput.className = "table-input nav-url";
+        urlInput.value = url;
+        urlInput.placeholder = "Page or URL";
+        urlInput.setAttribute("aria-label", "Page or URL");
+        urlCell.appendChild(urlInput);
+
+        const visibilityCell = document.createElement("td");
+        const visibilityLabel = document.createElement("label");
+        visibilityLabel.className = "switch";
+        const visibilityInput = document.createElement("input");
+        visibilityInput.type = "checkbox";
+        visibilityInput.checked = true;
+        visibilityInput.setAttribute("aria-label", "Show menu link");
+        const visibilitySlider = document.createElement("span");
+        visibilityLabel.append(visibilityInput, visibilitySlider);
+        visibilityCell.appendChild(visibilityLabel);
+
+        const orderCell = document.createElement("td");
+        orderCell.className = "order-actions";
+        const upButton = document.createElement("button");
+        upButton.type = "button";
+        upButton.className = "icon-button move-up";
+        upButton.textContent = "↑";
+        upButton.setAttribute("aria-label", "Move menu item up");
+        const downButton = document.createElement("button");
+        downButton.type = "button";
+        downButton.className = "icon-button move-down";
+        downButton.textContent = "↓";
+        downButton.setAttribute("aria-label", "Move menu item down");
+        orderCell.append(upButton, downButton);
+
+        const actionCell = document.createElement("td");
+        const removeButton = document.createElement("button");
+        removeButton.type = "button";
+        removeButton.className = "remove-button";
+        removeButton.textContent = "Remove";
+        actionCell.appendChild(removeButton);
+
+        row.append(labelCell, urlCell, visibilityCell, orderCell, actionCell);
+        navigationRows.appendChild(row);
+    }
+
+    document.getElementById("addNavItem").addEventListener("click", function () {
+        createNavigationRow();
+        navigationFeedback.textContent = "A new menu row has been added.";
+    });
+
+    navigationRows.addEventListener("click", function (event) {
+        const button = event.target.closest("button");
+        if (!button) return;
+
+        const row = button.closest("tr");
+        if (!row) return;
+
+        if (button.classList.contains("remove-button")) {
+            row.remove();
+            navigationFeedback.textContent = "Menu row removed from this page.";
+        }
+
+        if (button.classList.contains("move-up") && row.previousElementSibling) {
+            navigationRows.insertBefore(row, row.previousElementSibling);
+            navigationFeedback.textContent = "Menu order changed.";
+        }
+
+        if (button.classList.contains("move-down") && row.nextElementSibling) {
+            navigationRows.insertBefore(row.nextElementSibling, row);
+            navigationFeedback.textContent = "Menu order changed.";
+        }
+    });
+
+    document.getElementById("resetNavigation").addEventListener("click", function () {
+        navigationRows.innerHTML = originalNavigation;
+        navigationFeedback.textContent = "The original menu items have been restored on this page.";
+    });
+
+    document.getElementById("reviewNavigation").addEventListener("click", function () {
+        const rows = [...navigationRows.querySelectorAll("tr")];
+        const visibleRows = rows.filter(row => row.querySelector('input[type="checkbox"]').checked);
+        const incomplete = visibleRows.some(row =>
+            !row.querySelector(".nav-label").value.trim() ||
+            !row.querySelector(".nav-url").value.trim()
+        );
+
+        if (incomplete) {
+            navigationFeedback.textContent = "Complete the label and link for every visible menu item.";
+            return;
+        }
+
+        navigationFeedback.textContent =
+            visibleRows.length + " visible menu item(s) are ready for review.";
+    });
+
+    const footerFieldIds = [
+        "footerDescription", "footerPhone", "footerEmail", "footerAddress",
+        "copyrightText", "footerTagline", "footerAboutLink", "footerLoansLink",
+        "footerFaqLink", "footerContactLink", "footerPrivacyLink", "footerTermsLink",
+        "instagramLink", "whatsappLink", "twitterLink", "tiktokLink", "linkedinLink"
+    ];
+
+    const originalFooterValues = {};
+    footerFieldIds.forEach(id => {
+        originalFooterValues[id] = document.getElementById(id).value;
+    });
+
+    const footerOptionIds = ["showSocial", "showContact", "showFooterLinks", "showCopyright"];
+    const originalFooterOptions = {};
+    footerOptionIds.forEach(id => {
+        originalFooterOptions[id] = document.getElementById(id).checked;
+    });
+
+    document.getElementById("resetFooter").addEventListener("click", function () {
+        footerFieldIds.forEach(id => {
+            document.getElementById(id).value = originalFooterValues[id];
+        });
+
+        footerOptionIds.forEach(id => {
+            document.getElementById(id).checked = originalFooterOptions[id];
+        });
+
+        footerFeedback.textContent = "The original footer field values have been restored on this page.";
+    });
+
+    document.getElementById("reviewFooter").addEventListener("click", function () {
+        const enabledOptions = footerOptionIds.filter(id =>
+            document.getElementById(id).checked
+        ).length;
+
+        footerFeedback.textContent =
+            "Footer settings reviewed. " + enabledOptions + " display option(s) are enabled.";
+    });
+</script>
+
+</body>
+</html>

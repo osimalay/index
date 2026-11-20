@@ -27,11 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // AUTOMATIC ACTIVE PAGE
     const currentPage =
         window.location.pathname.split("/").pop() || "index.html";
+    const activePage =
+        currentPage === "forgot-password.html" ? "login.html" : currentPage;
 
     document.querySelectorAll(".main-nav a").forEach((link) => {
         const linkPage = link.getAttribute("href");
 
-        if (linkPage === currentPage) {
+        if (linkPage === activePage) {
             link.classList.add("active");
             link.setAttribute("aria-current", "page");
         } else {

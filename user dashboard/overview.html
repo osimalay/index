@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your METRO LOAN account overview.">
+    <title>Overview | METRO LOAN</title>
+
+    <link rel="stylesheet" href="/css/overview.css">
+    <script src="../js/user-dashboard.js" defer></script>
+    <script src="../js/auth.js" defer></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <a href="overview.html" class="sidebar-brand">
+                <span class="brand-mark">M</span>
+                <span class="brand-name">METRO LOAN</span>
+            </a>
+
+            <div class="sidebar-label">MAIN MENU</div>
+
+            <nav class="sidebar-nav" aria-label="User dashboard navigation">
+
+                <a href="overview.html" class="sidebar-link active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="apply-for-loan.html" class="sidebar-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Apply for a Loan</span>
+                </a>
+
+                <a href="my-loans.html" class="sidebar-link">
+                    <span class="nav-icon">▤</span>
+                    <span>My Loans</span>
+                </a>
+
+                <a href="repayment-schedule.html" class="sidebar-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Repayment Schedule</span>
+                </a>
+
+                <a href="transaction-history.html" class="sidebar-link">
+                    <span class="nav-icon">↔</span>
+                    <span>Transaction History</span>
+                </a>
+
+                <div class="sidebar-label account-label">ACCOUNT</div>
+
+                <a href="my-profile.html" class="sidebar-link">
+                    <span class="nav-icon">♙</span>
+                    <span>My Profile</span>
+                </a>
+
+                <a href="notifications.html" class="sidebar-link">
+                    <span class="nav-icon">♧</span>
+                    <span>Notifications</span>
+                    <span class="notification-count">2</span>
+                </a>
+
+                <a href="help-support.html" class="sidebar-link">
+                    <span class="nav-icon">?</span>
+                    <span>Help &amp; Support</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-help">
+                    <div class="help-icon">?</div>
+                    <div>
+                        <strong>Need assistance?</strong>
+                        <p>We're here to help.</p>
+                        <a href="help-support.html">Get support →</a>
+                    </div>
+                </div>
+
+                <a href="../login.html" class="logout-link">
+                    <span class="nav-icon">↪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP HEADER -->
+            <header class="top-header">
+
+                <div class="header-left">
+                    <button class="sidebar-toggle" id="sidebarToggle"
+                            type="button" aria-label="Open navigation"
+                            aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div>
+                        <p class="header-greeting">USER ACCOUNT</p>
+                        <h1>Overview</h1>
+                    </div>
+                </div>
+
+                <div class="header-right">
+
+                    <a href="notifications.html" class="header-notification"
+                       aria-label="Notifications">
+                        <span>♧</span>
+                        <i></i>
+                    </a>
+
+                    <div class="header-divider"></div>
+
+                    <a href="my-profile.html" class="profile-summary">
+                        <div class="profile-avatar">U</div>
+                        <div class="profile-details">
+                            <strong>My Account</strong>
+                            <span>Personal dashboard</span>
+                        </div>
+                        <span class="profile-arrow">⌄</span>
+                    </a>
+
+                </div>
+
+            </header>
+
+            <!-- PAGE BODY -->
+            <div class="dashboard-content">
+
+                <!-- WELCOME -->
+                <section class="welcome-section">
+                    <div>
+                        <p class="welcome-label">YOUR FINANCIAL SPACE</p>
+                        <h2>Welcome back!</h2>
+                        <p>Here's an overview of your METRO LOAN account.</p>
+                    </div>
+
+                    <a href="apply-for-loan.html" class="welcome-button">
+                        <span>＋</span> Apply for a Loan
+                    </a>
+                </section>
+
+                <!-- ACCOUNT SUMMARY -->
+                <section class="summary-grid">
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon balance-icon">₦</div>
+                            <span class="summary-status">ACCOUNT</span>
+                        </div>
+                        <p class="summary-title">Outstanding Loan</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Your current loan balance</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon payment-icon">₦</div>
+                            <span class="summary-status">PAYMENTS</span>
+                        </div>
+                        <p class="summary-title">Total Repaid</p>
+                        <h3>₦0.00</h3>
+                        <p class="summary-description">Your total repayments</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon loan-icon">▤</div>
+                            <span class="summary-status">LOANS</span>
+                        </div>
+                        <p class="summary-title">Active Loans</p>
+                        <h3>0</h3>
+                        <p class="summary-description">Currently active loans</p>
+                    </article>
+
+                    <article class="summary-card">
+                        <div class="summary-top">
+                            <div class="summary-icon due-icon">◷</div>
+                            <span class="summary-status">SCHEDULE</span>
+                        </div>
+                        <p class="summary-title">Next Repayment</p>
+                        <h3 class="no-payment">No payment due</h3>
+                        <p class="summary-description">Your upcoming payment date</p>
+                    </article>
+
+                </section>
+
+                <!-- MAIN DASHBOARD GRID -->
+                <section class="dashboard-grid">
+
+                    <!-- LOAN OVERVIEW -->
+                    <article class="dashboard-panel loan-overview">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Loan Overview</h3>
+                                <p>A summary of your current loan activity</p>
+                            </div>
+                            <a href="my-loans.html" class="panel-link">View all →</a>
+                        </div>
+
+                        <div class="empty-state">
+                            <div class="empty-icon">▤</div>
+                            <h4>No active loans yet</h4>
+                            <p>
+                                You don't have an active loan at the moment.
+                                When you apply and receive a loan, its details
+                                will appear here.
+                            </p>
+                            <a href="apply-for-loan.html" class="small-primary-button">
+                                Apply for a Loan
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- REPAYMENT -->
+                    <article class="dashboard-panel repayment-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Next Repayment</h3>
+                                <p>Your upcoming repayment details</p>
+                            </div>
+                            <a href="repayment-schedule.html" class="panel-link">
+                                View schedule →
+                            </a>
+                        </div>
+
+                        <div class="repayment-empty">
+                            <div class="repayment-icon">◷</div>
+                            <h4>No repayment scheduled</h4>
+                            <p>
+                                Your repayment schedule will appear here
+                                when you have an active loan.
+                            </p>
+                        </div>
+                    </article>
+
+                </section>
+
+                <!-- LOWER DASHBOARD GRID -->
+                <section class="dashboard-grid lower-grid">
+
+                    <!-- RECENT TRANSACTIONS -->
+                    <article class="dashboard-panel transactions-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Recent Transactions</h3>
+                                <p>Your latest account activity</p>
+                            </div>
+                            <a href="transaction-history.html" class="panel-link">
+                                View history →
+                            </a>
+                        </div>
+
+                        <div class="transaction-empty">
+                            <div class="transaction-icon">↔</div>
+                            <h4>No transactions yet</h4>
+                            <p>Your account transactions will appear here.</p>
+                        </div>
+                    </article>
+
+                    <!-- ACCOUNT STATUS -->
+                    <article class="dashboard-panel account-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Account Information</h3>
+                                <p>Your account at a glance</p>
+                            </div>
+                            <a href="my-profile.html" class="panel-link">My profile →</a>
+                        </div>
+
+                        <div class="account-status-row">
+                            <span>Account type</span>
+                            <strong>Personal</strong>
+                        </div>
+
+                        <div class="account-status-row">
+                            <span>Account status</span>
+                            <strong class="status-inactive">Not verified</strong>
+                        </div>
+
+                        <div class="account-status-row">
+                            <span>Loan activity</span>
+                            <strong>No active loan</strong>
+                        </div>
+
+                        <a href="my-profile.html" class="complete-profile-link">
+                            Review your profile →
+                        </a>
+                    </article>
+
+                </section>
+
+                <!-- QUICK LINKS -->
+                <section class="quick-actions-section">
+                    <div class="section-heading">
+                        <div>
+                            <h3>Quick Actions</h3>
+                            <p>Access your account services quickly.</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions-grid">
+
+                        <a href="apply-for-loan.html" class="quick-action">
+                            <span class="quick-action-icon">＋</span>
+                            <span>
+                                <strong>Apply for a Loan</strong>
+                                <small>Start a new application</small>
+                            </span>
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                        <a href="repayment-schedule.html" class="quick-action">
+                            <span class="quick-action-icon">▦</span>
+                            <span>
+                                <strong>Repayment Schedule</strong>
+                                <small>Check payment details</small>
+                            </span>
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                        <a href="transaction-history.html" class="quick-action">
+                            <span class="quick-action-icon">↔</span>
+                            <span>
+                                <strong>Transaction History</strong>
+                                <small>Review account activity</small>
+                            </span>
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                        <a href="help-support.html" class="quick-action">
+                            <span class="quick-action-icon">?</span>
+                            <span>
+                                <strong>Help &amp; Support</strong>
+                                <small>Get assistance</small>
+                            </span>
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                    </div>
+                </section>
+
+                <!-- FOOTER -->
+                <footer class="dashboard-footer">
+                    <p>© <span id="current-year">2026</span> METRO LOAN. All rights reserved.</p>
+                    <p>Manage your finances with clarity and confidence.</p>
+                </footer>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+</body>
+</html>

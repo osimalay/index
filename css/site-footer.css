@@ -17,16 +17,30 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .footer-brand .brand-mark {
     width: 43px;
     height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: var(--green);
+    border-radius: 5px 17px 5px 17px;
+    font-family: Arial, sans-serif;
     font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
 }
 
 .footer-brand .brand-name {
+    color: var(--text);
     font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 .footer-tagline {

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Activity Monitor | METRO LOAN Command Desk</title>
+    <link rel="stylesheet" href="../css/admin-activity.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+<div class="admin-layout">
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="activity"></aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <main class="admin-main">
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Live Activity Monitor</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile"><span class="topbar-avatar">SA</span><span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span></a>
+            </div>
+        </header>
+        <div class="admin-content">
+            <section class="module-intro">
+                <div class="module-intro-copy"><span class="module-eyebrow">PLATFORM OVERSIGHT</span><h2>Live Activity Monitor</h2><p>Review recent activity across the METRO LOAN command desk and customer platform.</p></div>
+                <span class="module-status">Awaiting connection</span>
+            </section>
+            <section class="module-stats" aria-label="Activity summary">
+                <article class="module-stat"><span>Events today</span><strong>—</strong></article>
+                <article class="module-stat"><span>Active sessions</span><strong>—</strong></article>
+                <article class="module-stat"><span>Last event</span><strong>—</strong></article>
+            </section>
+            <section class="module-panel">
+                <div class="module-panel-heading"><div><h3>Recent platform activity</h3><p>New events will appear here when activity tracking is connected.</p></div></div>
+                <div class="module-empty-state" aria-live="polite"><span class="module-empty-icon">⌁</span><h4>No activity to display</h4><p>Live activity data is not connected yet. No events are being shown or inferred.</p></div>
+                <p class="module-note"><strong>Data status</strong><span>Connect the activity event source to enable this monitor.</span></p>
+            </section>
+            <footer class="admin-footer"><span>© 2026 METRO LOAN. All rights reserved.</span><a href="admin-profile.html">Super Admin Account</a></footer>
+        </div>
+    </main>
+</div>
+</body>
+</html>

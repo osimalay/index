@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="METRO LOAN Command Desk - Images and Media Management">
+    <title>Images &amp; Media | METRO LOAN Command Desk</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/admin-media.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="media"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN AREA -->
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+                <div><span class="topbar-label">COMMAND DESK</span><h1>Images &amp; Media</h1></div>
+            </div>
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text"><strong>Super Admin</strong><small>Administrator</small></span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <!-- PAGE INTRO -->
+            <section class="page-intro">
+                <div>
+                    <span class="section-kicker">WEBSITE ASSETS</span>
+                    <h2>Media Library</h2>
+                    <p>Manage the images, banners, logos, icons and videos used across the METRO LOAN website.</p>
+                </div>
+
+                <label for="mediaUpload" class="primary-button">
+                    <span>＋</span> Upload Media
+                </label>
+            </section>
+
+            <!-- MEDIA SUMMARY -->
+            <section class="media-summary">
+                <article class="summary-card">
+                    <div class="summary-icon blue-icon">▧</div>
+                    <div>
+                        <span>Total Media Files</span>
+                        <strong>—</strong>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon purple-icon">▣</div>
+                    <div>
+                        <span>Images</span>
+                        <strong>—</strong>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon green-icon">▶</div>
+                    <div>
+                        <span>Videos</span>
+                        <strong>—</strong>
+                    </div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-icon orange-icon">▤</div>
+                    <div>
+                        <span>Storage Used</span>
+                        <strong>—</strong>
+                    </div>
+                </article>
+            </section>
+
+            <!-- UPLOAD AREA -->
+            <section class="content-panel upload-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Upload new media</h3>
+                        <p>Select files from your device to add them to the media library.</p>
+                    </div>
+                </div>
+
+                <label class="upload-dropzone" for="mediaUpload">
+                    <span class="upload-symbol">↑</span>
+                    <strong>Choose files to upload</strong>
+                    <span>Click here to select images, videos, logos or other media files.</span>
+                    <span class="upload-format">Select one or more files from your device</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="mediaUpload"
+                    class="visually-hidden"
+                    accept="image/*,video/*"
+                    multiple
+                >
+
+                <div class="selected-files" id="selectedFiles" aria-live="polite" hidden>
+                    <div class="selected-files-heading">
+                        <strong>Selected files</strong>
+                        <button type="button" id="clearSelectedFiles" class="text-button">Clear selection</button>
+                    </div>
+                    <ul id="selectedFilesList"></ul>
+                </div>
+            </section>
+
+            <!-- LIBRARY -->
+            <section class="content-panel library-panel">
+                <div class="library-heading">
+                    <div>
+                        <h3>Media Library</h3>
+                        <p>Browse and organize the media used on your website.</p>
+                    </div>
+                </div>
+
+                <div class="media-toolbar">
+                    <div class="media-search">
+                        <span>⌕</span>
+                        <input type="search" id="mediaSearch" placeholder="Search media files..." aria-label="Search media files">
+                    </div>
+
+                    <div class="media-filters">
+                        <select id="mediaTypeFilter" aria-label="Filter by media type">
+                            <option value="all">All media types</option>
+                            <option value="image">Images</option>
+                            <option value="video">Videos</option>
+                        </select>
+
+                        <select id="mediaSort" aria-label="Sort media files">
+                            <option value="newest">Newest first</option>
+                            <option value="oldest">Oldest first</option>
+                            <option value="name">Name</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="media-empty-state">
+                    <div class="empty-media-icon">
+                        <span>▧</span>
+                    </div>
+                    <h4>Your media library is empty</h4>
+                    <p>Uploaded media will appear here when it has been added to your library.</p>
+                    <label for="mediaUpload" class="secondary-button">Upload your first file</label>
+                </div>
+            </section>
+
+            <!-- ORGANIZATION -->
+            <section class="content-panel organization-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h3>Media organization</h3>
+                        <p>Keep your website assets organized by their intended use.</p>
+                    </div>
+                </div>
+
+                <div class="organization-grid">
+                    <div class="organization-item">
+                        <span class="folder-icon">▰</span>
+                        <div>
+                            <strong>Website Images</strong>
+                            <small>Page images and illustrations</small>
+                        </div>
+                    </div>
+
+                    <div class="organization-item">
+                        <span class="folder-icon">▰</span>
+                        <div>
+                            <strong>Banners</strong>
+                            <small>Hero images and promotional banners</small>
+                        </div>
+                    </div>
+
+                    <div class="organization-item">
+                        <span class="folder-icon">▰</span>
+                        <div>
+                            <strong>Brand Assets</strong>
+                            <small>Logos, icons and brand graphics</small>
+                        </div>
+                    </div>
+
+                    <div class="organization-item">
+                        <span class="folder-icon">▰</span>
+                        <div>
+                            <strong>Videos</strong>
+                            <small>Website video content</small>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="admin-footer">
+                <span>© 2026 METRO LOAN. All rights reserved.</span>
+                <span>Command Desk</span>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    const mediaUpload = document.getElementById("mediaUpload");
+    const selectedFiles = document.getElementById("selectedFiles");
+    const selectedFilesList = document.getElementById("selectedFilesList");
+    const clearSelectedFiles = document.getElementById("clearSelectedFiles");
+
+    mediaUpload.addEventListener("change", function () {
+        selectedFilesList.innerHTML = "";
+
+        if (!this.files.length) {
+            selectedFiles.hidden = true;
+            return;
+        }
+
+        Array.from(this.files).forEach(function (file) {
+            const item = document.createElement("li");
+            const name = document.createElement("span");
+            const size = document.createElement("small");
+
+            name.textContent = file.name;
+            size.textContent = (file.size / (1024 * 1024)).toFixed(2) + " MB";
+
+            item.appendChild(name);
+            item.appendChild(size);
+            selectedFilesList.appendChild(item);
+        });
+
+        selectedFiles.hidden = false;
+    });
+
+    clearSelectedFiles.addEventListener("click", function () {
+        mediaUpload.value = "";
+        selectedFilesList.innerHTML = "";
+        selectedFiles.hidden = true;
+    });
+</script>
+
+</body>
+</html>

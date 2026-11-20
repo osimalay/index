@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Desk | METRO LOAN</title>
+    <link rel="stylesheet" href="../css/admin-dashboard.css">
+    <script src="../js/admin.js" defer></script>
+</head>
+<body>
+
+<div class="admin-layout">
+
+    <aside class="admin-sidebar" id="adminSidebar" data-navigation="shared" data-active="dashboard"></aside>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div class="topbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+                <div>
+                    <span class="topbar-label">COMMAND DESK</span>
+                    <h1>Overview</h1>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <a href="admin-notifications.html" class="topbar-icon" aria-label="Notifications">♢</a>
+                <a href="admin-profile.html" class="topbar-profile">
+                    <span class="topbar-avatar">SA</span>
+                    <span class="topbar-profile-text">
+                        <strong>Super Admin</strong>
+                        <small>Administrator</small>
+                    </span>
+                </a>
+            </div>
+        </header>
+
+        <div class="admin-content">
+
+            <section class="welcome-section">
+                <div>
+                    <span class="section-eyebrow">PLATFORM CONTROL CENTRE</span>
+                    <h2>Welcome to Command Desk</h2>
+                    <p>Manage your website, customers, agents, loan operations and platform activity from one place.</p>
+                </div>
+                <a href="admin-website-editor.html" class="primary-button">Manage Website <span>→</span></a>
+            </section>
+
+            <section class="overview-grid">
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Registered Customers</span><span class="card-icon blue">♙</span></div>
+                    <strong>—</strong>
+                    <small>Customer accounts</small>
+                </article>
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Website Visitors</span><span class="card-icon purple">◉</span></div>
+                    <strong>—</strong>
+                    <small>Visitor activity</small>
+                </article>
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Loan Applications</span><span class="card-icon green">▣</span></div>
+                    <strong>—</strong>
+                    <small>Applications received</small>
+                </article>
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Active Loans</span><span class="card-icon orange">▰</span></div>
+                    <strong>—</strong>
+                    <small>Current loan accounts</small>
+                </article>
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Transactions</span><span class="card-icon cyan">⇄</span></div>
+                    <strong>—</strong>
+                    <small>Payment activity</small>
+                </article>
+                <article class="overview-card">
+                    <div class="overview-card-top"><span>Agents</span><span class="card-icon pink">♧</span></div>
+                    <strong>—</strong>
+                    <small>Agent accounts</small>
+                </article>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">QUICK ACCESS</span>
+                        <h2>Website Management</h2>
+                        <p>Control the public-facing METRO LOAN website.</p>
+                    </div>
+                </div>
+
+                <div class="management-grid">
+                    <a href="admin-website-editor.html" class="management-card">
+                        <span class="management-icon">✎</span>
+                        <div><h3>Website Editor</h3><p>Edit website content and page sections.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-pages.html" class="management-card">
+                        <span class="management-icon">▤</span>
+                        <div><h3>Page Management</h3><p>Manage the pages on your website.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-media.html" class="management-card">
+                        <span class="management-icon">▧</span>
+                        <div><h3>Images & Media</h3><p>Manage website images and media.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-navigation.html" class="management-card">
+                        <span class="management-icon">☷</span>
+                        <div><h3>Navigation & Footer</h3><p>Manage menus, links and footer content.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-appearance.html" class="management-card">
+                        <span class="management-icon">◐</span>
+                        <div><h3>Website Appearance</h3><p>Manage branding, colours and typography.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-seo.html" class="management-card">
+                        <span class="management-icon">⌕</span>
+                        <div><h3>SEO & Page Settings</h3><p>Manage search and page settings.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">PEOPLE & ACCESS</span>
+                        <h2>Customer and Agent Control</h2>
+                        <p>Manage accounts, access and permissions.</p>
+                    </div>
+                </div>
+
+                <div class="management-grid">
+                    <a href="admin-customers.html" class="management-card">
+                        <span class="management-icon">♙</span>
+                        <div><h3>All Customers</h3><p>View and manage registered customers.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-user-access.html" class="management-card">
+                        <span class="management-icon">⛨</span>
+                        <div><h3>User Access & Bans</h3><p>Manage account access and restrictions.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-agents.html" class="management-card">
+                        <span class="management-icon">♧</span>
+                        <div><h3>Agent Management</h3><p>Manage agents and their permissions.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">FINANCIAL OPERATIONS</span>
+                        <h2>Loan & Payment Management</h2>
+                        <p>Access the platform's loan and financial operations.</p>
+                    </div>
+                </div>
+
+                <div class="management-grid">
+                    <a href="admin-applications.html" class="management-card">
+                        <span class="management-icon">▣</span>
+                        <div><h3>Loan Applications</h3><p>Review and manage loan applications.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-loans.html" class="management-card">
+                        <span class="management-icon">▰</span>
+                        <div><h3>Loan Management</h3><p>Manage customer loan accounts.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-repayments.html" class="management-card">
+                        <span class="management-icon">↻</span>
+                        <div><h3>Repayments</h3><p>Manage repayment records and schedules.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-transactions.html" class="management-card">
+                        <span class="management-icon">⇄</span>
+                        <div><h3>Transactions</h3><p>Review payment and transaction records.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">COMMUNICATION CENTRE</span>
+                        <h2>Communication & Support</h2>
+                        <p>Manage platform communications and help content.</p>
+                    </div>
+                </div>
+
+                <div class="management-grid">
+                    <a href="admin-notifications.html" class="management-card">
+                        <span class="management-icon">♢</span>
+                        <div><h3>Notifications</h3><p>Manage customer and platform notifications.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-messages.html" class="management-card">
+                        <span class="management-icon">✉</span>
+                        <div><h3>Messages & Support</h3><p>Manage messages and support requests.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-faq-management.html" class="management-card">
+                        <span class="management-icon">?</span>
+                        <div><h3>FAQ & Help Content</h3><p>Manage frequently asked questions and help information.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <div class="section-heading">
+                    <div>
+                        <span class="section-eyebrow">PLATFORM OVERSIGHT</span>
+                        <h2>Monitoring & System Control</h2>
+                        <p>Monitor activity, review reports and manage system settings.</p>
+                    </div>
+                </div>
+
+                <div class="management-grid">
+                    <a href="admin-visitors.html" class="management-card">
+                        <span class="management-icon">◉</span>
+                        <div><h3>Visitors & Analytics</h3><p>Review website visitor activity and traffic.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-activity.html" class="management-card">
+                        <span class="management-icon">⌁</span>
+                        <div><h3>Live Activity Monitor</h3><p>Monitor platform activity.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-reports.html" class="management-card">
+                        <span class="management-icon">▥</span>
+                        <div><h3>Reports & Analytics</h3><p>Review platform and financial reports.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-security.html" class="management-card">
+                        <span class="management-icon">⬡</span>
+                        <div><h3>Security Centre</h3><p>Manage security controls and alerts.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-activity-logs.html" class="management-card">
+                        <span class="management-icon">≡</span>
+                        <div><h3>Audit Logs</h3><p>Review administrative activity records.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                    <a href="admin-settings.html" class="management-card">
+                        <span class="management-icon">⚙</span>
+                        <div><h3>System Settings</h3><p>Manage platform-wide settings.</p></div>
+                        <span class="card-arrow">→</span>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="admin-footer">
+                <span>© 2026 METRO LOAN. All rights reserved.</span>
+                <a href="admin-profile.html">Super Admin Account</a>
+            </footer>
+
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
